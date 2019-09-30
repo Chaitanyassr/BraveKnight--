@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Netherplace_Looping.ogg-48f0a43ad1b6fb6480955a2ed182b7bf.oggstr"
+
+[deps]
+
+source_file="res://audio/Netherplace_Looping.ogg"
+dest_files=[ "res://.import/Netherplace_Looping.ogg-48f0a43ad1b6fb6480955a2ed182b7bf.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
