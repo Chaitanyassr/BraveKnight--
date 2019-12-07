@@ -1,0 +1,119 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://MaleZombie3.gd" type="Script" id=1]
+[ext_resource path="res://Male zombie/Attack (1).png" type="Texture" id=2]
+[ext_resource path="res://Male zombie/Attack (2).png" type="Texture" id=3]
+[ext_resource path="res://Male zombie/Attack (3).png" type="Texture" id=4]
+[ext_resource path="res://Male zombie/Attack (4).png" type="Texture" id=5]
+[ext_resource path="res://Male zombie/Attack (5).png" type="Texture" id=6]
+[ext_resource path="res://Male zombie/Attack (6).png" type="Texture" id=7]
+[ext_resource path="res://Male zombie/Attack (7).png" type="Texture" id=8]
+[ext_resource path="res://Male zombie/Attack (8).png" type="Texture" id=9]
+[ext_resource path="res://femalezombie/Walk (1).png" type="Texture" id=10]
+[ext_resource path="res://femalezombie/Walk (2).png" type="Texture" id=11]
+[ext_resource path="res://femalezombie/Walk (3).png" type="Texture" id=12]
+[ext_resource path="res://femalezombie/Walk (4).png" type="Texture" id=13]
+[ext_resource path="res://femalezombie/Walk (5).png" type="Texture" id=14]
+[ext_resource path="res://femalezombie/Walk (6).png" type="Texture" id=15]
+[ext_resource path="res://femalezombie/Walk (7).png" type="Texture" id=16]
+[ext_resource path="res://femalezombie/Walk (8).png" type="Texture" id=17]
+[ext_resource path="res://femalezombie/Walk (9).png" type="Texture" id=18]
+[ext_resource path="res://femalezombie/Walk (10).png" type="Texture" id=19]
+[ext_resource path="res://Dead/blood_PNG6088small.png" type="Texture" id=20]
+[ext_resource path="res://Areahgujf2D.gd" type="Script" id=21]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15.9214, 20.11 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "AttackZ",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "Walkingfemale",
+"speed": 5.0
+} ]
+
+[sub_resource type="ParticlesMaterial" id=3]
+trail_divisor = 11
+emission_shape = 4
+emission_point_count = 19
+flag_disable_z = true
+spread = 180.0
+flatness = 1.0
+gravity = Vector3( 0, 300, 0 )
+initial_velocity = 623.66
+initial_velocity_random = 1.0
+angular_velocity = 15.0006
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = -17.3
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 27.0205, 19.6865 )
+
+[node name="femalezombie2" type="KinematicBody2D"]
+position = Vector2( 2082.8, -942.608 )
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 4503.27, 934.13 )
+shape = SubResource( 1 )
+
+[node name="FemaleZombie2" type="AnimatedSprite" parent="."]
+position = Vector2( 4498.71, 943.362 )
+scale = Vector2( 0.243534, 0.188165 )
+z_index = 1
+frames = SubResource( 2 )
+animation = "Walkingfemale"
+frame = 1
+speed_scale = 4.0
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( 4523.2, 963.24 )
+enabled = true
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+position = Vector2( 4506.21, 666.566 )
+enabled = true
+cast_to = Vector2( 10, 0 )
+
+[node name="RayCast2D3" type="RayCast2D" parent="."]
+position = Vector2( 4497.08, 935.384 )
+enabled = true
+cast_to = Vector2( 0, -50 )
+
+[node name="RayCast2D4" type="RayCast2D" parent="."]
+position = Vector2( 4516.53, 937.816 )
+enabled = true
+cast_to = Vector2( 0, -50 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.15
+one_shot = true
+
+[node name="Particles2D3" type="Particles2D" parent="."]
+visible = false
+position = Vector2( 4519.68, 951.479 )
+z_index = 3
+amount = 5
+lifetime = 7.06
+one_shot = true
+speed_scale = 5.0
+explosiveness = 0.5
+process_material = SubResource( 3 )
+texture = ExtResource( 20 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 300, 0 )
+script = ExtResource( 21 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 4195.41, 973.855 )
+z_index = 1
+shape = SubResource( 4 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

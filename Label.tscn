@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Label.gd" type="Script" id=1]
+
+[node name="Label" type="Label"]
+margin_left = 6.0
+margin_top = 431.0
+margin_right = 1030.0
+margin_bottom = 587.0
+script = ExtResource( 1 )

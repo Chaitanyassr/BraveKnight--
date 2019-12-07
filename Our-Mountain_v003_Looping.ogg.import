@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Our-Mountain_v003_Looping.ogg-0963761bc67eca6c4712eef2557f5882.oggstr"
+
+[deps]
+
+source_file="res://Our-Mountain_v003_Looping.ogg"
+dest_files=[ "res://.import/Our-Mountain_v003_Looping.ogg-0963761bc67eca6c4712eef2557f5882.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

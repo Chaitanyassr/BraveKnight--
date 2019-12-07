@@ -1,0 +1,2251 @@
+[gd_scene load_steps=121 format=2]
+
+[ext_resource path="res://object/Bush (2).png" type="Texture" id=1]
+[ext_resource path="res://object/Bush (1).png" type="Texture" id=2]
+[ext_resource path="res://object/ArrowSign.png" type="Texture" id=3]
+[ext_resource path="res://object/DeadBush.png" type="Texture" id=4]
+[ext_resource path="res://object/Tree.png" type="Texture" id=5]
+[ext_resource path="res://stardate_81316.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://object/TombStone (2).png" type="Texture" id=7]
+[ext_resource path="res://object/Sign.png" type="Texture" id=8]
+[ext_resource path="res://object/TombStone (1).png" type="Texture" id=9]
+[ext_resource path="res://MaleZombie2.tscn" type="PackedScene" id=10]
+[ext_resource path="res://femalezombie2.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=12]
+[ext_resource path="res://ScreenShake.gd" type="Script" id=13]
+[ext_resource path="res://Male zombie/BG.png" type="Texture" id=14]
+[ext_resource path="res://DeathParticle.tscn" type="PackedScene" id=15]
+[ext_resource path="res://audio/Jump9.ogg" type="AudioStream" id=16]
+[ext_resource path="res://audio/Pickup_Coin18.ogg" type="AudioStream" id=17]
+[ext_resource path="res://audio/Randomize20.ogg" type="AudioStream" id=18]
+[ext_resource path="res://audio/thunderrumble.ogg" type="AudioStream" id=19]
+[ext_resource path="res://audio/218479__yap-audio-production__drawsword01.ogg" type="AudioStream" id=20]
+[ext_resource path="res://object/Skeleton.png" type="Texture" id=21]
+[ext_resource path="res://Tile (3).png" type="Texture" id=22]
+[ext_resource path="res://Tile (14).png" type="Texture" id=23]
+[ext_resource path="res://Tile (16).png" type="Texture" id=24]
+[ext_resource path="res://object/Bone (1).png" type="Texture" id=25]
+[ext_resource path="res://object/Bone (2).png" type="Texture" id=26]
+[ext_resource path="res://object/Bone (3).png" type="Texture" id=27]
+[ext_resource path="res://object/Tile (1).png" type="Texture" id=28]
+[ext_resource path="res://object/Tile (4).png" type="Texture" id=29]
+[ext_resource path="res://object/Tile (2).png" type="Texture" id=30]
+[ext_resource path="res://object/Bone (4).png" type="Texture" id=31]
+[ext_resource path="res://object/Tile (6).png" type="Texture" id=32]
+[ext_resource path="res://object/Tile (5).png" type="Texture" id=33]
+[ext_resource path="res://object/Tile (3).png" type="Texture" id=34]
+[ext_resource path="res://object/Crate.png" type="Texture" id=35]
+[ext_resource path="res://object/Tile (14).png" type="Texture" id=36]
+[ext_resource path="res://object/Tile (15).png" type="Texture" id=37]
+[ext_resource path="res://object/Tile (16).png" type="Texture" id=38]
+[ext_resource path="res://WorldComplete.gd" type="Script" id=39]
+[ext_resource path="res://object/Tile (9).png" type="Texture" id=40]
+[ext_resource path="res://Coin_G.tscn" type="PackedScene" id=41]
+[ext_resource path="res://Coin_G.gd" type="Script" id=42]
+[ext_resource path="res://goldcoin/Gold_1.png" type="Texture" id=43]
+[ext_resource path="res://goldcoin/Gold_2.png" type="Texture" id=44]
+[ext_resource path="res://goldcoin/Gold_3.png" type="Texture" id=45]
+[ext_resource path="res://goldcoin/Gold_4.png" type="Texture" id=46]
+[ext_resource path="res://goldcoin/Gold_5.png" type="Texture" id=47]
+[ext_resource path="res://goldcoin/Gold_6.png" type="Texture" id=48]
+[ext_resource path="res://goldcoin/Gold_7.png" type="Texture" id=49]
+[ext_resource path="res://goldcoin/Gold_8.png" type="Texture" id=50]
+[ext_resource path="res://goldcoin/Gold_9.png" type="Texture" id=51]
+[ext_resource path="res://Coin_S.tscn" type="PackedScene" id=52]
+[ext_resource path="res://Coin_S.gd" type="Script" id=53]
+[ext_resource path="res://Scoin/Silver_1.png" type="Texture" id=54]
+[ext_resource path="res://Scoin/Silver_2.png" type="Texture" id=55]
+[ext_resource path="res://Scoin/Silver_3.png" type="Texture" id=56]
+[ext_resource path="res://Scoin/Silver_4.png" type="Texture" id=57]
+[ext_resource path="res://Scoin/Silver_5.png" type="Texture" id=58]
+[ext_resource path="res://Scoin/Silver_6.png" type="Texture" id=59]
+[ext_resource path="res://Scoin/Silver_7.png" type="Texture" id=60]
+[ext_resource path="res://Scoin/Silver_8.png" type="Texture" id=61]
+[ext_resource path="res://Scoin/Silver_9.png" type="Texture" id=62]
+[ext_resource path="res://Scoin/Silver_10.png" type="Texture" id=63]
+[ext_resource path="res://Coin_B.tscn" type="PackedScene" id=64]
+[ext_resource path="res://Coin_B.gd" type="Script" id=65]
+[ext_resource path="res://Coin_B/Bronze_1.png" type="Texture" id=66]
+[ext_resource path="res://Coin_B/Bronze_2.png" type="Texture" id=67]
+[ext_resource path="res://Coin_B/Bronze_3.png" type="Texture" id=68]
+[ext_resource path="res://Coin_B/Bronze_4.png" type="Texture" id=69]
+[ext_resource path="res://Coin_B/Bronze_5.png" type="Texture" id=70]
+[ext_resource path="res://Coin_B/Bronze_6.png" type="Texture" id=71]
+[ext_resource path="res://Coin_B/Bronze_7.png" type="Texture" id=72]
+[ext_resource path="res://Coin_B/Bronze_8.png" type="Texture" id=73]
+[ext_resource path="res://Coin_B/Bronze_9.png" type="Texture" id=74]
+[ext_resource path="res://Coin_B/Bronze_10.png" type="Texture" id=75]
+[ext_resource path="res://ScoreCounter.tscn" type="PackedScene" id=76]
+[ext_resource path="res://SlowTime.tscn" type="PackedScene" id=77]
+[ext_resource path="res://Area2D.gd" type="Script" id=78]
+[ext_resource path="res://Control.gd" type="Script" id=79]
+[ext_resource path="res://gui fairy/GamePause.png" type="Texture" id=80]
+[ext_resource path="res://touchjoy/shadedLight03.png" type="Texture" id=81]
+[ext_resource path="res://touchjoy/flatLight01.png" type="Texture" id=82]
+[ext_resource path="res://touchjoy/shadedLight05.png" type="Texture" id=83]
+[ext_resource path="res://touchjoy/flatLight03.png" type="Texture" id=84]
+[ext_resource path="res://touchjoy/shadedLight26.png" type="Texture" id=85]
+[ext_resource path="res://touchjoy/flatLight24.png" type="Texture" id=86]
+[ext_resource path="res://touchjoy/shadedLight36.png" type="Texture" id=87]
+[ext_resource path="res://touchjoy/flatLight34.png" type="Texture" id=88]
+[ext_resource path="res://touchjoy/shadedLight41.png" type="Texture" id=89]
+[ext_resource path="res://touchjoy/flatLight39.png" type="Texture" id=90]
+[ext_resource path="res://touchjoy/shadedLight44.png" type="Texture" id=91]
+[ext_resource path="res://touchjoy/flatLight42.png" type="Texture" id=92]
+[ext_resource path="res://story/bg.png" type="Texture" id=93]
+[ext_resource path="res://audio/Our-Mountain_v003_Looping.ogg" type="AudioStream" id=94]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 6 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 1381.54, 457.311 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 43.0753, 75.2067 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 1.70654e+007, 5.64139e+006 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 211.906, 28.9761 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 237.931, 24.9304 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 225.409, 286.062 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 100.075, 97.106 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 375.454, 37.2559 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 694.146, 84.7808 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 46.3054, 63.3006 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 685.313, 371.683 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 144.998, 384.499 )
+
+[sub_resource type="CircleShape2D" id=14]
+radius = 17.4829
+
+[sub_resource type="SpriteFrames" id=15]
+animations = [ {
+"frames": [ ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ) ],
+"loop": true,
+"name": "Coin_G",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=16]
+radius = 16.1499
+
+[sub_resource type="SpriteFrames" id=17]
+animations = [ {
+"frames": [ ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ) ],
+"loop": true,
+"name": "Coin_S",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=18]
+radius = 19.1503
+
+[sub_resource type="SpriteFrames" id=19]
+animations = [ {
+"frames": [ ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ) ],
+"loop": true,
+"name": "Coin_B",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 5413.49, 133.915 )
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 432.816, 152.157 )
+
+[sub_resource type="DynamicFont" id=22]
+size = 20
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=23]
+size = 35
+outline_color = Color( 0.960784, 0.694118, 0.694118, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 352.699, 820.586 )
+
+[sub_resource type="DynamicFont" id=25]
+size = 50
+font_data = ExtResource( 6 )
+
+[sub_resource type="RectangleShape2D" id=26]
+extents = Vector2( 144.643, 509.639 )
+
+[node name="World" type="Node"]
+__meta__ = {
+"_edit_horizontal_guides_": [ -167.369, -166.262 ]
+}
+
+[node name="Bush (2)2" type="Sprite" parent="."]
+position = Vector2( 517.753, 332.266 )
+texture = ExtResource( 1 )
+
+[node name="Bush (1)" type="Sprite" parent="."]
+position = Vector2( 707.344, 149.512 )
+scale = Vector2( 1, 1.14933 )
+texture = ExtResource( 2 )
+
+[node name="ArrowSign2" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 8421.21, -170.336 )
+scale = Vector2( 2.01227, 1.73316 )
+texture = ExtResource( 3 )
+
+[node name="DeadBush" type="Sprite" parent="ArrowSign2"]
+position = Vector2( -3172.82, 191.498 )
+scale = Vector2( 0.957366, 1.06677 )
+z_index = -2
+texture = ExtResource( 4 )
+
+[node name="Tree5" type="Sprite" parent="ArrowSign2"]
+position = Vector2( 128.765, -143.044 )
+scale = Vector2( 1.22401, 1.55599 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="ArrowSign2"]
+margin_left = -22.0
+margin_top = -26.0
+margin_right = 40.0
+margin_bottom = 6.0
+rect_rotation = 15.0
+custom_fonts/font = SubResource( 1 )
+text = "EXIT"
+
+[node name="TombStone (2)" type="Sprite" parent="."]
+position = Vector2( 4902.52, 307.551 )
+scale = Vector2( 3.20473, 2.25625 )
+texture = ExtResource( 7 )
+
+[node name="Tree2" type="Sprite" parent="."]
+position = Vector2( 3243.7, 234.673 )
+scale = Vector2( 1.38936, 1.84841 )
+texture = ExtResource( 5 )
+
+[node name="Tree3" type="Sprite" parent="."]
+position = Vector2( 7977.66, -324.045 )
+scale = Vector2( 1.38936, 1.84841 )
+texture = ExtResource( 5 )
+
+[node name="Tree4" type="Sprite" parent="."]
+position = Vector2( 9316.5, -323.007 )
+scale = Vector2( 1.38936, 1.84841 )
+texture = ExtResource( 5 )
+
+[node name="Sign" type="Sprite" parent="."]
+position = Vector2( 2671.13, 414.174 )
+scale = Vector2( 1.27832, 1.13359 )
+texture = ExtResource( 8 )
+
+[node name="TombStone (1)" type="Sprite" parent="."]
+position = Vector2( 3256.92, 429.385 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)2" type="Sprite" parent="."]
+position = Vector2( 3316.75, 429.385 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)3" type="Sprite" parent="."]
+position = Vector2( 3383.24, 429.385 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)4" type="Sprite" parent="."]
+position = Vector2( 3187.11, 426.061 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)5" type="Sprite" parent="."]
+position = Vector2( 3112.32, 426.061 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)6" type="Sprite" parent="."]
+position = Vector2( 3032.54, 424.399 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)7" type="Sprite" parent="."]
+position = Vector2( 2954.43, 426.061 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)8" type="Sprite" parent="."]
+position = Vector2( 2877.97, 426.061 )
+texture = ExtResource( 9 )
+
+[node name="EnemyHolder" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="MaleZombie2" parent="EnemyHolder" instance=ExtResource( 10 )]
+
+[node name="femalezombie2" parent="EnemyHolder" instance=ExtResource( 11 )]
+position = Vector2( 2072.4, -945.444 )
+
+[node name="Player2" type="Node" parent="."]
+editor/display_folded = true
+
+[node name="Player" parent="Player2" instance=ExtResource( 12 )]
+
+[node name="timer" type="Timer" parent="Player2/Player"]
+wait_time = 0.5
+
+[node name="Camera2D" type="Camera2D" parent="Player2/Player"]
+offset = Vector2( 200, 0 )
+rotating = true
+current = true
+drag_margin_h_enabled = false
+drag_margin_v_enabled = false
+smoothing_enabled = true
+editor_draw_screen = false
+
+[node name="ScreenShake" type="Node" parent="Player2/Player/Camera2D"]
+script = ExtResource( 13 )
+
+[node name="ShakeTween" type="Tween" parent="Player2/Player/Camera2D/ScreenShake"]
+
+[node name="Timer" type="Timer" parent="Player2/Player/Camera2D/ScreenShake"]
+
+[node name="Duration" type="Timer" parent="Player2/Player/Camera2D/ScreenShake"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Player2/Player"]
+
+[node name="BG" type="Sprite" parent="Player2/Player/ParallaxBackground"]
+position = Vector2( 516.97, 319.871 )
+scale = Vector2( 0.582713, 0.70265 )
+texture = ExtResource( 14 )
+
+[node name="DeathParticle" parent="Player2/Player" instance=ExtResource( 15 )]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Player2/Player"]
+visible = false
+color = Color( 0.972549, 0.286275, 0.286275, 1 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player2/Player"]
+stream = ExtResource( 16 )
+
+[node name="soundtimer" type="Timer" parent="Player2/Player"]
+wait_time = 0.25
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="Player2/Player"]
+stream = ExtResource( 17 )
+
+[node name="soundtimer1" type="Timer" parent="Player2/Player"]
+wait_time = 0.18
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="Player2/Player"]
+stream = ExtResource( 18 )
+
+[node name="soundtimer3" type="Timer" parent="Player2/Player"]
+
+[node name="dead" type="AudioStreamPlayer2D" parent="Player2/Player"]
+stream = ExtResource( 19 )
+
+[node name="dead2" type="Timer" parent="Player2/Player"]
+
+[node name="sword" type="AudioStreamPlayer2D" parent="Player2/Player"]
+stream = ExtResource( 20 )
+
+[node name="swordtimer" type="Timer" parent="Player2/Player"]
+wait_time = 0.5
+
+[node name="TombStone (1)9" type="Sprite" parent="."]
+position = Vector2( 3453.04, 427.723 )
+z_index = -1
+texture = ExtResource( 9 )
+
+[node name="Skeleton3" type="Sprite" parent="."]
+position = Vector2( 1097.76, 560.778 )
+texture = ExtResource( 21 )
+
+[node name="Wall" type="StaticBody2D" parent="."]
+editor/display_folded = true
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Wall"]
+position = Vector2( 10530.4, -524.223 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Wall"]
+position = Vector2( 8714.33, 365.203 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall"]
+position = Vector2( 1281.08, 534.376 )
+shape = SubResource( 3 )
+
+[node name="Walls" type="Node2D" parent="Wall"]
+
+[node name="Sprite" type="Sprite" parent="Wall/Walls"]
+position = Vector2( -79.9792, 619.225 )
+scale = Vector2( 4.89072, 1.82924 )
+texture = ExtResource( 22 )
+normal_map = ExtResource( 22 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Tile (14)2" type="Sprite" parent="Wall/Walls"]
+position = Vector2( 614.56, 242.425 )
+scale = Vector2( 1.33094, 0.661209 )
+z_index = -1
+texture = ExtResource( 23 )
+
+[node name="Tile (16)" type="Sprite" parent="Wall/Walls"]
+position = Vector2( 648.861, 398.432 )
+scale = Vector2( 2.94893, 0.54804 )
+texture = ExtResource( 24 )
+
+[node name="Tile (14)" type="Sprite" parent="Wall/Walls"]
+position = Vector2( 405.817, 398.351 )
+scale = Vector2( 0.92644, 0.549303 )
+texture = ExtResource( 23 )
+
+[node name="Tile (16)2" type="Sprite" parent="Wall/Walls"]
+position = Vector2( 828.646, 242.276 )
+scale = Vector2( 2.01715, 0.667375 )
+z_index = -1
+texture = ExtResource( 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2( 52.9206, 563.609 )
+scale = Vector2( 1e-005, 1e-005 )
+shape = SubResource( 4 )
+one_way_collision = true
+one_way_collision_margin = 33.3
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Wall"]
+position = Vector2( 740.744, 232.884 )
+shape = SubResource( 5 )
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Wall"]
+position = Vector2( 588.199, 392.721 )
+shape = SubResource( 6 )
+one_way_collision = true
+
+[node name="Bone (1)" type="Sprite" parent="Wall/CollisionShape2D3"]
+position = Vector2( -386.84, 297.733 )
+texture = ExtResource( 25 )
+
+[node name="Bone (2)" type="Sprite" parent="Wall/CollisionShape2D3"]
+position = Vector2( -407.609, 228.093 )
+texture = ExtResource( 26 )
+
+[node name="Skeleton" type="Sprite" parent="Wall/CollisionShape2D3"]
+position = Vector2( -369.735, 141.348 )
+rotation = 0.261799
+scale = Vector2( 0.952089, 1 )
+texture = ExtResource( 21 )
+
+[node name="TombStone (2)" type="Sprite" parent="Wall/CollisionShape2D3"]
+position = Vector2( -444.262, 86.3687 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Wall"]
+position = Vector2( 996.447, 612.221 )
+shape = SubResource( 6 )
+one_way_collision = true
+
+[node name="Bone (3)" type="Sprite" parent="Wall/CollisionShape2D7"]
+position = Vector2( 206.432, 75.254 )
+texture = ExtResource( 27 )
+
+[node name="Tile (1)" type="Sprite" parent="Wall/CollisionShape2D7"]
+position = Vector2( -181.268, 37.259 )
+texture = ExtResource( 28 )
+
+[node name="Tile (4)" type="Sprite" parent="Wall/CollisionShape2D7/Tile (1)"]
+position = Vector2( -0.000244141, 125.841 )
+texture = ExtResource( 29 )
+
+[node name="Tile (2)" type="Sprite" parent="Wall/CollisionShape2D7/Tile (1)"]
+position = Vector2( 127.92, -0.483734 )
+texture = ExtResource( 30 )
+
+[node name="Tile (2)2" type="Sprite" parent="Wall/CollisionShape2D7/Tile (1)"]
+position = Vector2( 255.676, -0.527405 )
+texture = ExtResource( 30 )
+
+[node name="Bone (4)" type="Sprite" parent="Wall/CollisionShape2D7/Tile (1)"]
+position = Vector2( 376.68, 46.2222 )
+texture = ExtResource( 31 )
+
+[node name="Tile (2)" type="Sprite" parent="Wall/CollisionShape2D7"]
+position = Vector2( 202.276, 36.408 )
+texture = ExtResource( 30 )
+
+[node name="Tile (6)" type="Sprite" parent="Wall/CollisionShape2D7/Tile (2)"]
+position = Vector2( 250.839, 125.841 )
+texture = ExtResource( 32 )
+
+[node name="Tile (5)" type="Sprite" parent="Wall/CollisionShape2D7/Tile (2)"]
+position = Vector2( -101.498, 124.415 )
+scale = Vector2( 1, 1.08201 )
+texture = ExtResource( 33 )
+
+[node name="Tile (5)2" type="Sprite" parent="Wall/CollisionShape2D7/Tile (2)"]
+position = Vector2( 1.59949, 125.637 )
+texture = ExtResource( 33 )
+
+[node name="Tile (5)4" type="Sprite" parent="Wall/CollisionShape2D7/Tile (2)"]
+position = Vector2( -242.463, 123.887 )
+scale = Vector2( 1.31437, 1 )
+texture = ExtResource( 33 )
+
+[node name="Tile (5)3" type="Sprite" parent="Wall/CollisionShape2D7/Tile (2)"]
+position = Vector2( 127.441, 120.735 )
+scale = Vector2( 1, 1.09568 )
+texture = ExtResource( 33 )
+
+[node name="Tile (2)2" type="Sprite" parent="Wall/CollisionShape2D7"]
+position = Vector2( 330.116, 34.3275 )
+texture = ExtResource( 30 )
+
+[node name="Tile (3)" type="Sprite" parent="Wall/CollisionShape2D7/Tile (2)2"]
+position = Vector2( 126.219, 6.10352e-005 )
+texture = ExtResource( 34 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Wall"]
+position = Vector2( -302.676, 290.531 )
+shape = SubResource( 7 )
+
+[node name="Tree" type="Sprite" parent="Wall/CollisionShape2D4"]
+position = Vector2( 163.768, 10.2191 )
+scale = Vector2( 1.16981, 1.69779 )
+texture = ExtResource( 5 )
+
+[node name="Crate" type="Sprite" parent="Wall/CollisionShape2D4/Tree"]
+position = Vector2( -120.5, 96.7647 )
+scale = Vector2( 0.684707, 0.467106 )
+texture = ExtResource( 35 )
+
+[node name="Tile (2)" type="Sprite" parent="Wall/CollisionShape2D4"]
+position = Vector2( -299.663, 326.986 )
+scale = Vector2( 3.27171, 1.79224 )
+texture = ExtResource( 30 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Wall"]
+position = Vector2( 1411.35, 510.15 )
+shape = SubResource( 8 )
+
+[node name="Bone (1)" type="Sprite" parent="Wall/CollisionShape2D9"]
+position = Vector2( -350.225, 176.769 )
+texture = ExtResource( 25 )
+
+[node name="Bone (2)" type="Sprite" parent="Wall/CollisionShape2D9"]
+position = Vector2( -110.825, 193.869 )
+texture = ExtResource( 26 )
+
+[node name="Tile (14)" type="Sprite" parent="Wall/CollisionShape2D9"]
+position = Vector2( 312.477, -221.081 )
+texture = ExtResource( 36 )
+
+[node name="Tile (15)" type="Sprite" parent="Wall/CollisionShape2D9/Tile (14)"]
+position = Vector2( 374.775, 0 )
+texture = ExtResource( 37 )
+
+[node name="Tile (15)2" type="Sprite" parent="Wall/CollisionShape2D9/Tile (14)"]
+position = Vector2( 500.175, 0 )
+texture = ExtResource( 37 )
+
+[node name="Tile (16)" type="Sprite" parent="Wall/CollisionShape2D9/Tile (14)"]
+position = Vector2( 627, 0 )
+texture = ExtResource( 38 )
+
+[node name="Tile (14)2" type="Sprite" parent="Wall/CollisionShape2D9"]
+position = Vector2( 4417.91, -229.631 )
+z_index = -1
+texture = ExtResource( 36 )
+
+[node name="Tile (15)" type="Sprite" parent="Wall/CollisionShape2D9/Tile (14)2"]
+position = Vector2( 374.775, 0 )
+z_index = -1
+texture = ExtResource( 37 )
+
+[node name="Tile (15)2" type="Sprite" parent="Wall/CollisionShape2D9/Tile (14)2"]
+position = Vector2( 500.175, 0 )
+z_index = -1
+texture = ExtResource( 37 )
+
+[node name="Tile (16)" type="Sprite" parent="Wall/CollisionShape2D9/Tile (14)2"]
+position = Vector2( 627, 0 )
+z_index = -1
+texture = ExtResource( 38 )
+
+[node name="Tile (14)3" type="Sprite" parent="Wall/CollisionShape2D9"]
+position = Vector2( 5043.48, -398.52 )
+z_index = -1
+texture = ExtResource( 36 )
+
+[node name="Tile (15)" type="Sprite" parent="Wall/CollisionShape2D9/Tile (14)3"]
+position = Vector2( 373.775, 0 )
+z_index = -1
+texture = ExtResource( 37 )
+
+[node name="Tile (15)2" type="Sprite" parent="Wall/CollisionShape2D9/Tile (14)3"]
+position = Vector2( 500.175, 0 )
+z_index = -1
+texture = ExtResource( 37 )
+
+[node name="Tile (16)" type="Sprite" parent="Wall/CollisionShape2D9/Tile (14)3"]
+position = Vector2( 627, 0 )
+z_index = -1
+texture = ExtResource( 38 )
+
+[node name="Tile (15)" type="Sprite" parent="Wall/CollisionShape2D9"]
+position = Vector2( 435.027, -221.081 )
+texture = ExtResource( 37 )
+
+[node name="Tile (15)4" type="Sprite" parent="Wall/CollisionShape2D9"]
+position = Vector2( 4540.46, -229.631 )
+z_index = -1
+texture = ExtResource( 37 )
+
+[node name="Tile (15)5" type="Sprite" parent="Wall/CollisionShape2D9"]
+position = Vector2( 5163.18, -398.52 )
+z_index = -1
+texture = ExtResource( 37 )
+
+[node name="Tile (15)2" type="Sprite" parent="Wall/CollisionShape2D9"]
+position = Vector2( 561.853, -221.081 )
+texture = ExtResource( 37 )
+
+[node name="Tile (15)3" type="Sprite" parent="Wall/CollisionShape2D9"]
+position = Vector2( 4667.28, -229.631 )
+z_index = -1
+texture = ExtResource( 37 )
+
+[node name="Tile (15)6" type="Sprite" parent="Wall/CollisionShape2D9"]
+position = Vector2( 5290.01, -398.52 )
+z_index = -1
+texture = ExtResource( 37 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Wall"]
+position = Vector2( 2040.6, 267.9 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Wall"]
+position = Vector2( 6145.29, 261.514 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Wall"]
+position = Vector2( 6764.97, 88.7746 )
+shape = SubResource( 9 )
+one_way_collision = true
+
+[node name="Skeleton" type="Sprite" parent="Wall/CollisionShape2D14"]
+position = Vector2( 252.973, -63.1739 )
+texture = ExtResource( 21 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Wall"]
+position = Vector2( 3286.05, 541.5 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Wall"]
+position = Vector2( 3575.76, 407.045 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Wall"]
+position = Vector2( 4874.78, 760.998 )
+shape = SubResource( 12 )
+
+[node name="WorldComplete" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 0, -1.57895 )
+gravity_point = true
+script = ExtResource( 39 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldComplete"]
+position = Vector2( 8861.82, -486.325 )
+shape = SubResource( 13 )
+
+[node name="Skeleton" type="Sprite" parent="."]
+position = Vector2( -186.264, 657.588 )
+texture = ExtResource( 21 )
+
+[node name="Skeleton2" type="Sprite" parent="."]
+position = Vector2( 72.7531, 683.49 )
+texture = ExtResource( 21 )
+
+[node name="Bone (1)" type="Sprite" parent="."]
+position = Vector2( -391.518, 582.689 )
+texture = ExtResource( 25 )
+
+[node name="Bone (2)" type="Sprite" parent="."]
+position = Vector2( -387.852, 682.874 )
+texture = ExtResource( 26 )
+
+[node name="Bone (3)" type="Sprite" parent="."]
+position = Vector2( -523.468, 627.895 )
+texture = ExtResource( 27 )
+
+[node name="Bush (2)" type="Sprite" parent="."]
+position = Vector2( 434.675, 342.04 )
+texture = ExtResource( 1 )
+
+[node name="Tree" type="Sprite" parent="."]
+position = Vector2( 1408.19, 442.507 )
+scale = Vector2( 0.884659, 1.26578 )
+texture = ExtResource( 5 )
+
+[node name="Crate" type="Sprite" parent="Tree"]
+position = Vector2( -138.125, 63.1204 )
+texture = ExtResource( 35 )
+
+[node name="Tile (1)" type="Sprite" parent="."]
+position = Vector2( 2703.33, 538.93 )
+scale = Vector2( 1.73477, 1.33398 )
+texture = ExtResource( 28 )
+
+[node name="Bone (3)" type="Sprite" parent="Tile (1)"]
+position = Vector2( 944.565, 35.6605 )
+texture = ExtResource( 27 )
+
+[node name="Bone (2)" type="Sprite" parent="Tile (1)"]
+position = Vector2( 980.708, -11.3416 )
+texture = ExtResource( 26 )
+
+[node name="Bone (1)" type="Sprite" parent="Tile (1)"]
+position = Vector2( 988.922, 16.4323 )
+texture = ExtResource( 25 )
+
+[node name="Tile (1)3" type="Sprite" parent="."]
+position = Vector2( 7437.29, -19.7871 )
+scale = Vector2( 1.73477, 1.33398 )
+z_index = -1
+texture = ExtResource( 28 )
+
+[node name="Bone (3)" type="Sprite" parent="Tile (1)3"]
+position = Vector2( 944.565, 35.6605 )
+texture = ExtResource( 27 )
+
+[node name="Bone (2)" type="Sprite" parent="Tile (1)3"]
+position = Vector2( 980.708, -11.3416 )
+texture = ExtResource( 26 )
+
+[node name="Bone (1)" type="Sprite" parent="Tile (1)3"]
+position = Vector2( 988.922, 16.4323 )
+texture = ExtResource( 25 )
+
+[node name="Tile (1)4" type="Sprite" parent="."]
+position = Vector2( 8776.14, -18.7499 )
+scale = Vector2( 1.73477, 1.33398 )
+texture = ExtResource( 28 )
+
+[node name="Bone (3)" type="Sprite" parent="Tile (1)4"]
+position = Vector2( 944.565, 35.6605 )
+texture = ExtResource( 27 )
+
+[node name="Bone (2)" type="Sprite" parent="Tile (1)4"]
+position = Vector2( 980.708, -11.3416 )
+texture = ExtResource( 26 )
+
+[node name="Bone (1)" type="Sprite" parent="Tile (1)4"]
+position = Vector2( 988.922, 16.4323 )
+texture = ExtResource( 25 )
+
+[node name="Tile (1)2" type="Sprite" parent="."]
+position = Vector2( 4305.55, 469.651 )
+scale = Vector2( 1.73477, 1.33398 )
+texture = ExtResource( 28 )
+
+[node name="Tile (2)" type="Sprite" parent="."]
+position = Vector2( 3053.06, 539.42 )
+scale = Vector2( 3.9168, 1.34512 )
+texture = ExtResource( 30 )
+
+[node name="Tile (2)3" type="Sprite" parent="."]
+position = Vector2( 7787.01, -19.2977 )
+scale = Vector2( 3.9168, 1.34512 )
+z_index = -1
+texture = ExtResource( 30 )
+
+[node name="Tile (2)4" type="Sprite" parent="."]
+position = Vector2( 9125.86, -18.2605 )
+scale = Vector2( 3.9168, 1.34512 )
+texture = ExtResource( 30 )
+
+[node name="Tile (2)2" type="Sprite" parent="."]
+position = Vector2( 4655.28, 471.141 )
+scale = Vector2( 3.9168, 1.34512 )
+texture = ExtResource( 30 )
+
+[node name="Tile (4)" type="Sprite" parent="."]
+position = Vector2( 2691.53, 813.116 )
+scale = Vector2( 1.55664, 2.97051 )
+texture = ExtResource( 29 )
+
+[node name="Tile (4)3" type="Sprite" parent="."]
+position = Vector2( 7425.48, 254.399 )
+scale = Vector2( 1.55664, 2.97051 )
+texture = ExtResource( 29 )
+
+[node name="Tile (4)4" type="Sprite" parent="."]
+position = Vector2( 8764.33, 255.436 )
+scale = Vector2( 1.55664, 2.97051 )
+texture = ExtResource( 29 )
+
+[node name="Tile (4)2" type="Sprite" parent="."]
+position = Vector2( 4293.75, 744.837 )
+scale = Vector2( 1.55664, 2.97051 )
+texture = ExtResource( 29 )
+
+[node name="Tile (5)" type="Sprite" parent="."]
+position = Vector2( 3044.93, 819.9 )
+scale = Vector2( 4.00586, 3.1041 )
+texture = ExtResource( 33 )
+
+[node name="Tile (2)" type="Sprite" parent="Tile (5)"]
+position = Vector2( 106.363, -88.9984 )
+scale = Vector2( 0.660946, 0.454854 )
+texture = ExtResource( 30 )
+
+[node name="Tile (5)7" type="Sprite" parent="."]
+position = Vector2( 7778.88, 261.183 )
+scale = Vector2( 4.00586, 3.1041 )
+texture = ExtResource( 33 )
+
+[node name="Tile (2)" type="Sprite" parent="Tile (5)7"]
+position = Vector2( 106.363, -88.9984 )
+scale = Vector2( 0.660946, 0.454854 )
+z_index = -1
+texture = ExtResource( 30 )
+
+[node name="Tile (5)10" type="Sprite" parent="."]
+position = Vector2( 9117.73, 262.22 )
+scale = Vector2( 4.00586, 3.1041 )
+texture = ExtResource( 33 )
+
+[node name="Tile (2)" type="Sprite" parent="Tile (5)10"]
+position = Vector2( 106.363, -88.9984 )
+scale = Vector2( 0.660946, 0.454854 )
+texture = ExtResource( 30 )
+
+[node name="Tile (5)4" type="Sprite" parent="."]
+position = Vector2( 4647.15, 751.621 )
+scale = Vector2( 4.00586, 3.1041 )
+texture = ExtResource( 33 )
+
+[node name="Tile (2)" type="Sprite" parent="Tile (5)4"]
+position = Vector2( 106.363, -88.9984 )
+scale = Vector2( 0.660946, 0.454854 )
+texture = ExtResource( 30 )
+
+[node name="Tile (5)2" type="Sprite" parent="."]
+position = Vector2( 3382.65, 736.728 )
+scale = Vector2( 1.28945, 1.6791 )
+texture = ExtResource( 33 )
+
+[node name="Tile (5)8" type="Sprite" parent="."]
+position = Vector2( 8116.61, 178.01 )
+scale = Vector2( 1.28945, 1.6791 )
+texture = ExtResource( 33 )
+
+[node name="Tile (5)11" type="Sprite" parent="."]
+position = Vector2( 9455.46, 179.048 )
+scale = Vector2( 1.28945, 1.6791 )
+texture = ExtResource( 33 )
+
+[node name="Tile (5)5" type="Sprite" parent="."]
+position = Vector2( 4984.87, 668.449 )
+scale = Vector2( 1.28945, 1.6791 )
+texture = ExtResource( 33 )
+
+[node name="Skeleton" type="Sprite" parent="Tile (5)5"]
+position = Vector2( -312.617, -113.901 )
+texture = ExtResource( 21 )
+
+[node name="Bone (3)" type="Sprite" parent="Tile (5)5"]
+position = Vector2( -427.334, -24.8149 )
+texture = ExtResource( 27 )
+
+[node name="Bone (4)" type="Sprite" parent="Tile (5)5"]
+position = Vector2( -231.413, -2.04846 )
+texture = ExtResource( 31 )
+
+[node name="Bone (1)" type="Sprite" parent="Tile (5)5"]
+position = Vector2( -117.984, -50.5509 )
+texture = ExtResource( 25 )
+
+[node name="Tile (3)" type="Sprite" parent="."]
+position = Vector2( 3807.63, 541.946 )
+scale = Vector2( 2.69219, 1.38965 )
+texture = ExtResource( 34 )
+
+[node name="Tile (3)3" type="Sprite" parent="."]
+position = Vector2( 8541.58, -16.7709 )
+scale = Vector2( 2.69219, 1.38965 )
+z_index = -1
+texture = ExtResource( 34 )
+
+[node name="Tile (3)4" type="Sprite" parent="."]
+position = Vector2( 9880.43, -15.7337 )
+scale = Vector2( 2.69219, 1.38965 )
+texture = ExtResource( 34 )
+
+[node name="Tile (3)2" type="Sprite" parent="."]
+position = Vector2( 5409.85, 473.667 )
+scale = Vector2( 2.69219, 1.38965 )
+texture = ExtResource( 34 )
+
+[node name="Tile (6)" type="Sprite" parent="."]
+position = Vector2( 3826.11, 809.01 )
+scale = Vector2( 2.36548, 2.85897 )
+texture = ExtResource( 32 )
+
+[node name="Tile (6)3" type="Sprite" parent="."]
+position = Vector2( 8560.07, 250.293 )
+scale = Vector2( 2.36548, 2.85897 )
+texture = ExtResource( 32 )
+
+[node name="Tile (6)4" type="Sprite" parent="."]
+position = Vector2( 9898.92, 251.33 )
+scale = Vector2( 2.36548, 2.85897 )
+texture = ExtResource( 32 )
+
+[node name="Tile (6)2" type="Sprite" parent="."]
+position = Vector2( 5428.33, 740.731 )
+scale = Vector2( 2.36548, 2.85897 )
+texture = ExtResource( 32 )
+
+[node name="Tile (5)3" type="Sprite" parent="."]
+position = Vector2( 3569.65, 807.572 )
+scale = Vector2( 1.66797, 2.79238 )
+texture = ExtResource( 33 )
+
+[node name="Tile (5)9" type="Sprite" parent="."]
+position = Vector2( 8303.61, 248.854 )
+scale = Vector2( 1.66797, 2.79238 )
+texture = ExtResource( 33 )
+
+[node name="Tile (5)12" type="Sprite" parent="."]
+position = Vector2( 9642.46, 249.892 )
+scale = Vector2( 1.66797, 2.79238 )
+texture = ExtResource( 33 )
+
+[node name="Tile (5)6" type="Sprite" parent="."]
+position = Vector2( 5171.87, 739.293 )
+scale = Vector2( 1.66797, 2.79238 )
+texture = ExtResource( 33 )
+
+[node name="Crate" type="Sprite" parent="."]
+position = Vector2( 3560.99, 396.311 )
+scale = Vector2( 1.1463, 1.05486 )
+texture = ExtResource( 35 )
+
+[node name="Tile (9)" type="Sprite" parent="."]
+position = Vector2( 3387.96, 910.884 )
+scale = Vector2( 1.27832, 1.13359 )
+texture = ExtResource( 40 )
+
+[node name="TombStone (1)" type="Sprite" parent="Tile (9)"]
+position = Vector2( -41.4041, -414.491 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)" type="Sprite" parent="Tile (9)/TombStone (1)"]
+position = Vector2( 63.7095, 2.93228 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)2" type="Sprite" parent="Tile (9)/TombStone (1)"]
+position = Vector2( 127.418, 2.93228 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)4" type="Sprite" parent="Tile (9)/TombStone (1)"]
+position = Vector2( 266.538, 4.39847 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)3" type="Sprite" parent="Tile (9)/TombStone (1)"]
+position = Vector2( 197.628, 2.93228 )
+texture = ExtResource( 9 )
+
+[node name="Bone (2)" type="Sprite" parent="Tile (9)/TombStone (1)/TombStone (1)3"]
+position = Vector2( -538.276, 220.101 )
+texture = ExtResource( 26 )
+
+[node name="Bone (1)" type="Sprite" parent="Tile (9)/TombStone (1)/TombStone (1)3"]
+position = Vector2( -354.95, 148.258 )
+texture = ExtResource( 25 )
+
+[node name="Bone (3)" type="Sprite" parent="Tile (9)/TombStone (1)/TombStone (1)3"]
+position = Vector2( -650.092, 79.3479 )
+texture = ExtResource( 27 )
+
+[node name="Bone (3)4" type="Sprite" parent="Tile (9)/TombStone (1)/TombStone (1)3"]
+position = Vector2( 603.285, 25.0992 )
+texture = ExtResource( 27 )
+
+[node name="Bone (4)" type="Sprite" parent="Tile (9)/TombStone (1)/TombStone (1)3"]
+position = Vector2( -92.3132, 110.138 )
+texture = ExtResource( 31 )
+
+[node name="Bone (2)2" type="Sprite" parent="Tile (9)/TombStone (1)/TombStone (1)3"]
+position = Vector2( -252.236, 96.942 )
+texture = ExtResource( 26 )
+
+[node name="Bone (2)4" type="Sprite" parent="Tile (9)/TombStone (1)/TombStone (1)3"]
+position = Vector2( 1001.14, 42.6934 )
+texture = ExtResource( 26 )
+
+[node name="Bone (3)2" type="Sprite" parent="Tile (9)/TombStone (1)/TombStone (1)3"]
+position = Vector2( 107.915, 79.3479 )
+texture = ExtResource( 27 )
+
+[node name="Bone (4)2" type="Sprite" parent="Tile (9)/TombStone (1)/TombStone (1)3"]
+position = Vector2( -523.974, 98.4082 )
+texture = ExtResource( 31 )
+
+[node name="Bone (3)3" type="Sprite" parent="Tile (9)/TombStone (1)/TombStone (1)3"]
+position = Vector2( 18.2024, 196.642 )
+texture = ExtResource( 27 )
+
+[node name="Bone (1)2" type="Sprite" parent="Tile (9)/TombStone (1)/TombStone (1)3"]
+position = Vector2( 234.033, 151.191 )
+texture = ExtResource( 25 )
+
+[node name="Bone (2)3" type="Sprite" parent="Tile (9)/TombStone (1)/TombStone (1)3"]
+position = Vector2( -458.965, 83.7464 )
+texture = ExtResource( 26 )
+
+[node name="TombStone (1)2" type="Sprite" parent="Tile (9)"]
+position = Vector2( -380.752, -414.491 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)" type="Sprite" parent="Tile (9)/TombStone (1)2"]
+position = Vector2( 63.7095, 2.93228 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)2" type="Sprite" parent="Tile (9)/TombStone (1)2"]
+position = Vector2( 127.418, 2.93228 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)4" type="Sprite" parent="Tile (9)/TombStone (1)2"]
+position = Vector2( 266.538, -6.10352e-005 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)3" type="Sprite" parent="Tile (9)/TombStone (1)2"]
+position = Vector2( 197.628, -6.10352e-005 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)3" type="Sprite" parent="Tile (9)"]
+position = Vector2( 297.944, -413.025 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)" type="Sprite" parent="Tile (9)/TombStone (1)3"]
+position = Vector2( 63.7095, 2.93228 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)2" type="Sprite" parent="Tile (9)/TombStone (1)3"]
+position = Vector2( 127.418, 2.93228 )
+texture = ExtResource( 9 )
+
+[node name="Tile (9)2" type="Sprite" parent="."]
+position = Vector2( 8121.92, 352.167 )
+scale = Vector2( 1.27832, 1.13359 )
+texture = ExtResource( 40 )
+
+[node name="TombStone (1)" type="Sprite" parent="Tile (9)2"]
+position = Vector2( -41.4041, -414.491 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)" type="Sprite" parent="Tile (9)2/TombStone (1)"]
+position = Vector2( 63.7095, 2.93228 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)2" type="Sprite" parent="Tile (9)2/TombStone (1)"]
+position = Vector2( 127.418, 2.93228 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)4" type="Sprite" parent="Tile (9)2/TombStone (1)"]
+position = Vector2( 266.538, 4.39847 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)3" type="Sprite" parent="Tile (9)2/TombStone (1)"]
+position = Vector2( 197.628, 2.93228 )
+texture = ExtResource( 9 )
+
+[node name="Bone (2)" type="Sprite" parent="Tile (9)2/TombStone (1)/TombStone (1)3"]
+position = Vector2( -538.276, 220.101 )
+texture = ExtResource( 26 )
+
+[node name="Bone (1)" type="Sprite" parent="Tile (9)2/TombStone (1)/TombStone (1)3"]
+position = Vector2( -354.95, 148.258 )
+texture = ExtResource( 25 )
+
+[node name="Bone (3)" type="Sprite" parent="Tile (9)2/TombStone (1)/TombStone (1)3"]
+position = Vector2( -650.092, 79.3479 )
+texture = ExtResource( 27 )
+
+[node name="Bone (3)4" type="Sprite" parent="Tile (9)2/TombStone (1)/TombStone (1)3"]
+position = Vector2( 603.285, 25.0992 )
+texture = ExtResource( 27 )
+
+[node name="Bone (4)" type="Sprite" parent="Tile (9)2/TombStone (1)/TombStone (1)3"]
+position = Vector2( -92.3132, 110.138 )
+texture = ExtResource( 31 )
+
+[node name="Bone (2)2" type="Sprite" parent="Tile (9)2/TombStone (1)/TombStone (1)3"]
+position = Vector2( -252.236, 96.942 )
+texture = ExtResource( 26 )
+
+[node name="Bone (2)4" type="Sprite" parent="Tile (9)2/TombStone (1)/TombStone (1)3"]
+position = Vector2( 1001.14, 42.6934 )
+texture = ExtResource( 26 )
+
+[node name="Bone (3)2" type="Sprite" parent="Tile (9)2/TombStone (1)/TombStone (1)3"]
+position = Vector2( 107.915, 79.3479 )
+texture = ExtResource( 27 )
+
+[node name="Bone (4)2" type="Sprite" parent="Tile (9)2/TombStone (1)/TombStone (1)3"]
+position = Vector2( -523.974, 98.4082 )
+texture = ExtResource( 31 )
+
+[node name="Bone (3)3" type="Sprite" parent="Tile (9)2/TombStone (1)/TombStone (1)3"]
+position = Vector2( 18.2024, 196.642 )
+texture = ExtResource( 27 )
+
+[node name="Bone (1)2" type="Sprite" parent="Tile (9)2/TombStone (1)/TombStone (1)3"]
+position = Vector2( 234.033, 151.191 )
+texture = ExtResource( 25 )
+
+[node name="Bone (2)3" type="Sprite" parent="Tile (9)2/TombStone (1)/TombStone (1)3"]
+position = Vector2( -458.965, 83.7464 )
+texture = ExtResource( 26 )
+
+[node name="TombStone (1)2" type="Sprite" parent="Tile (9)2"]
+position = Vector2( -380.752, -414.491 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)" type="Sprite" parent="Tile (9)2/TombStone (1)2"]
+position = Vector2( 63.7095, 2.93228 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)2" type="Sprite" parent="Tile (9)2/TombStone (1)2"]
+position = Vector2( 127.418, 2.93228 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)4" type="Sprite" parent="Tile (9)2/TombStone (1)2"]
+position = Vector2( 266.538, -6.10352e-005 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)3" type="Sprite" parent="Tile (9)2/TombStone (1)2"]
+position = Vector2( 197.628, -6.10352e-005 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)3" type="Sprite" parent="Tile (9)2"]
+position = Vector2( 297.944, -413.025 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)" type="Sprite" parent="Tile (9)2/TombStone (1)3"]
+position = Vector2( 63.7095, 2.93228 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)2" type="Sprite" parent="Tile (9)2/TombStone (1)3"]
+position = Vector2( 127.418, 2.93228 )
+texture = ExtResource( 9 )
+
+[node name="Tile (9)3" type="Sprite" parent="."]
+position = Vector2( 9460.77, 353.204 )
+scale = Vector2( 1.27832, 1.13359 )
+texture = ExtResource( 40 )
+
+[node name="TombStone (1)" type="Sprite" parent="Tile (9)3"]
+position = Vector2( -41.4041, -414.491 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)" type="Sprite" parent="Tile (9)3/TombStone (1)"]
+position = Vector2( 63.7095, 2.93228 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)2" type="Sprite" parent="Tile (9)3/TombStone (1)"]
+position = Vector2( 127.418, 2.93228 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)4" type="Sprite" parent="Tile (9)3/TombStone (1)"]
+position = Vector2( 266.538, 4.39847 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)3" type="Sprite" parent="Tile (9)3/TombStone (1)"]
+position = Vector2( 197.628, 2.93228 )
+texture = ExtResource( 9 )
+
+[node name="Bone (2)" type="Sprite" parent="Tile (9)3/TombStone (1)/TombStone (1)3"]
+position = Vector2( -538.276, 220.101 )
+texture = ExtResource( 26 )
+
+[node name="Bone (1)" type="Sprite" parent="Tile (9)3/TombStone (1)/TombStone (1)3"]
+position = Vector2( -354.95, 148.258 )
+texture = ExtResource( 25 )
+
+[node name="Bone (3)" type="Sprite" parent="Tile (9)3/TombStone (1)/TombStone (1)3"]
+position = Vector2( -650.092, 79.3479 )
+texture = ExtResource( 27 )
+
+[node name="Bone (3)4" type="Sprite" parent="Tile (9)3/TombStone (1)/TombStone (1)3"]
+position = Vector2( 603.285, 25.0992 )
+texture = ExtResource( 27 )
+
+[node name="Bone (4)" type="Sprite" parent="Tile (9)3/TombStone (1)/TombStone (1)3"]
+position = Vector2( -92.3132, 110.138 )
+texture = ExtResource( 31 )
+
+[node name="Bone (2)2" type="Sprite" parent="Tile (9)3/TombStone (1)/TombStone (1)3"]
+position = Vector2( -252.236, 96.942 )
+texture = ExtResource( 26 )
+
+[node name="Bone (2)4" type="Sprite" parent="Tile (9)3/TombStone (1)/TombStone (1)3"]
+position = Vector2( 1001.14, 42.6934 )
+texture = ExtResource( 26 )
+
+[node name="Bone (3)2" type="Sprite" parent="Tile (9)3/TombStone (1)/TombStone (1)3"]
+position = Vector2( 107.915, 79.3479 )
+texture = ExtResource( 27 )
+
+[node name="Bone (4)2" type="Sprite" parent="Tile (9)3/TombStone (1)/TombStone (1)3"]
+position = Vector2( -523.974, 98.4082 )
+texture = ExtResource( 31 )
+
+[node name="Bone (3)3" type="Sprite" parent="Tile (9)3/TombStone (1)/TombStone (1)3"]
+position = Vector2( 18.2024, 196.642 )
+texture = ExtResource( 27 )
+
+[node name="Bone (1)2" type="Sprite" parent="Tile (9)3/TombStone (1)/TombStone (1)3"]
+position = Vector2( 234.033, 151.191 )
+texture = ExtResource( 25 )
+
+[node name="Bone (2)3" type="Sprite" parent="Tile (9)3/TombStone (1)/TombStone (1)3"]
+position = Vector2( -458.965, 83.7464 )
+texture = ExtResource( 26 )
+
+[node name="TombStone (1)2" type="Sprite" parent="Tile (9)3"]
+position = Vector2( -380.752, -414.491 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)" type="Sprite" parent="Tile (9)3/TombStone (1)2"]
+position = Vector2( 63.7095, 2.93228 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)2" type="Sprite" parent="Tile (9)3/TombStone (1)2"]
+position = Vector2( 127.418, 2.93228 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)4" type="Sprite" parent="Tile (9)3/TombStone (1)2"]
+position = Vector2( 266.538, -6.10352e-005 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)3" type="Sprite" parent="Tile (9)3/TombStone (1)2"]
+position = Vector2( 197.628, -6.10352e-005 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)3" type="Sprite" parent="Tile (9)3"]
+position = Vector2( 297.944, -413.025 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)" type="Sprite" parent="Tile (9)3/TombStone (1)3"]
+position = Vector2( 63.7095, 2.93228 )
+texture = ExtResource( 9 )
+
+[node name="TombStone (1)2" type="Sprite" parent="Tile (9)3/TombStone (1)3"]
+position = Vector2( 127.418, 2.93228 )
+texture = ExtResource( 9 )
+
+[node name="Collectable" type="Node2D" parent="."]
+position = Vector2( 0.808962, 4.42865 )
+
+[node name="Coin_G" parent="Collectable" instance=ExtResource( 41 )]
+
+[node name="Coin_G6" type="Area2D" parent="Collectable"]
+position = Vector2( -2.37506, 5.51262 )
+script = ExtResource( 42 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_G6"]
+position = Vector2( 705.461, 322.508 )
+shape = SubResource( 14 )
+
+[node name="Coin_G" type="AnimatedSprite" parent="Collectable/Coin_G6"]
+position = Vector2( 702.289, 318.816 )
+scale = Vector2( 0.0791902, 0.061263 )
+frames = SubResource( 15 )
+animation = "Coin_G"
+frame = 2
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_G4" type="Area2D" parent="Collectable"]
+position = Vector2( -2.37506, 5.51262 )
+script = ExtResource( 42 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_G4"]
+position = Vector2( 1180.56, 279.398 )
+shape = SubResource( 14 )
+
+[node name="Coin_G" type="AnimatedSprite" parent="Collectable/Coin_G4"]
+position = Vector2( 1181.88, 279.299 )
+scale = Vector2( 0.0791902, 0.061263 )
+frames = SubResource( 15 )
+animation = "Coin_G"
+frame = 2
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_G5" type="Area2D" parent="Collectable"]
+position = Vector2( -2.37506, 5.51262 )
+script = ExtResource( 42 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_G5"]
+position = Vector2( 1121.29, 280.297 )
+shape = SubResource( 14 )
+
+[node name="Coin_G" type="AnimatedSprite" parent="Collectable/Coin_G5"]
+position = Vector2( 1125.3, 279.299 )
+scale = Vector2( 0.0791902, 0.061263 )
+frames = SubResource( 15 )
+animation = "Coin_G"
+frame = 2
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_G2" type="Area2D" parent="Collectable"]
+position = Vector2( -2.37506, 5.51262 )
+script = ExtResource( 42 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_G2"]
+position = Vector2( 1867.62, 133.904 )
+shape = SubResource( 14 )
+
+[node name="Coin_G" type="AnimatedSprite" parent="Collectable/Coin_G2"]
+position = Vector2( 1867.15, 132.906 )
+scale = Vector2( 0.0791902, 0.061263 )
+frames = SubResource( 15 )
+animation = "Coin_G"
+frame = 2
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_G3" type="Area2D" parent="Collectable"]
+position = Vector2( -2.37506, 5.51262 )
+script = ExtResource( 42 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_G3"]
+position = Vector2( 2767.54, 396.154 )
+shape = SubResource( 14 )
+
+[node name="Coin_G" type="AnimatedSprite" parent="Collectable/Coin_G3"]
+position = Vector2( 2769.75, 397.85 )
+scale = Vector2( 0.0791902, 0.061263 )
+frames = SubResource( 15 )
+animation = "Coin_G"
+frame = 2
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_G7" type="Area2D" parent="Collectable"]
+position = Vector2( -2.37506, 5.51262 )
+script = ExtResource( 42 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_G7"]
+position = Vector2( 3177.67, 316.72 )
+shape = SubResource( 14 )
+
+[node name="Coin_G" type="AnimatedSprite" parent="Collectable/Coin_G7"]
+position = Vector2( 3178.27, 318.416 )
+scale = Vector2( 0.0791902, 0.061263 )
+frames = SubResource( 15 )
+animation = "Coin_G"
+frame = 2
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_G8" type="Area2D" parent="Collectable"]
+position = Vector2( -2.37506, 5.51262 )
+script = ExtResource( 42 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_G8"]
+position = Vector2( 3587, 270.518 )
+shape = SubResource( 14 )
+
+[node name="Coin_G" type="AnimatedSprite" parent="Collectable/Coin_G8"]
+position = Vector2( 3586.79, 268.973 )
+scale = Vector2( 0.0791902, 0.061263 )
+frames = SubResource( 15 )
+animation = "Coin_G"
+frame = 2
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_G9" type="Area2D" parent="Collectable"]
+position = Vector2( -2.37506, 5.51262 )
+script = ExtResource( 42 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_G9"]
+position = Vector2( 3901.5, 315.099 )
+shape = SubResource( 14 )
+
+[node name="Coin_G" type="AnimatedSprite" parent="Collectable/Coin_G9"]
+position = Vector2( 3898.85, 314.363 )
+scale = Vector2( 0.0791902, 0.061263 )
+frames = SubResource( 15 )
+animation = "Coin_G"
+frame = 1
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_G10" type="Area2D" parent="Collectable"]
+position = Vector2( -2.37506, 5.51262 )
+script = ExtResource( 42 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_G10"]
+position = Vector2( 4778.51, 232.423 )
+shape = SubResource( 14 )
+
+[node name="Coin_G" type="AnimatedSprite" parent="Collectable/Coin_G10"]
+position = Vector2( 4780.73, 230.066 )
+scale = Vector2( 0.0791902, 0.061263 )
+frames = SubResource( 15 )
+animation = "Coin_G"
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_G11" type="Area2D" parent="Collectable"]
+position = Vector2( -2.37506, 5.51262 )
+script = ExtResource( 42 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_G11"]
+position = Vector2( 5489.36, 239.718 )
+shape = SubResource( 14 )
+
+[node name="Coin_G" type="AnimatedSprite" parent="Collectable/Coin_G11"]
+position = Vector2( 5489.15, 240.603 )
+scale = Vector2( 0.0791902, 0.061263 )
+frames = SubResource( 15 )
+animation = "Coin_G"
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_G12" type="Area2D" parent="Collectable"]
+position = Vector2( -2.37506, 5.51262 )
+script = ExtResource( 42 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_G12"]
+position = Vector2( 5958.67, 161.094 )
+shape = SubResource( 14 )
+
+[node name="Coin_G" type="AnimatedSprite" parent="Collectable/Coin_G12"]
+position = Vector2( 5960.08, 161.169 )
+scale = Vector2( 0.0791902, 0.061263 )
+frames = SubResource( 15 )
+animation = "Coin_G"
+frame = 8
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_G13" type="Area2D" parent="Collectable"]
+position = Vector2( -2.37506, 5.51262 )
+script = ExtResource( 42 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_G13"]
+position = Vector2( 5919.76, 105.166 )
+shape = SubResource( 14 )
+
+[node name="Coin_G" type="AnimatedSprite" parent="Collectable/Coin_G13"]
+position = Vector2( 5921.17, 106.052 )
+scale = Vector2( 0.0791902, 0.061263 )
+frames = SubResource( 15 )
+animation = "Coin_G"
+frame = 7
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_G14" type="Area2D" parent="Collectable"]
+position = Vector2( -2.37506, 5.51262 )
+script = ExtResource( 42 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_G14"]
+position = Vector2( 5856.54, 105.977 )
+shape = SubResource( 14 )
+
+[node name="Coin_G" type="AnimatedSprite" parent="Collectable/Coin_G14"]
+position = Vector2( 5855.52, 106.863 )
+scale = Vector2( 0.0791902, 0.061263 )
+frames = SubResource( 15 )
+animation = "Coin_G"
+frame = 7
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_G15" type="Area2D" parent="Collectable"]
+position = Vector2( -2.37506, 5.51262 )
+script = ExtResource( 42 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_G15"]
+position = Vector2( 6471.75, -78.8286 )
+shape = SubResource( 14 )
+
+[node name="Coin_G" type="AnimatedSprite" parent="Collectable/Coin_G15"]
+position = Vector2( 6472.35, -79.564 )
+scale = Vector2( 0.0791902, 0.061263 )
+frames = SubResource( 15 )
+animation = "Coin_G"
+frame = 7
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_S" parent="Collectable" instance=ExtResource( 52 )]
+
+[node name="Coin_S4" type="Area2D" parent="Collectable"]
+script = ExtResource( 53 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_S4"]
+position = Vector2( 868.024, 152.421 )
+shape = SubResource( 16 )
+
+[node name="Coin_S" type="AnimatedSprite" parent="Collectable/Coin_S4"]
+position = Vector2( 869.378, 153.251 )
+scale = Vector2( 0.066647, 0.0653703 )
+frames = SubResource( 17 )
+animation = "Coin_S"
+frame = 7
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_S2" type="Area2D" parent="Collectable"]
+script = ExtResource( 53 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_S2"]
+position = Vector2( 2258.31, 144.338 )
+shape = SubResource( 16 )
+
+[node name="Coin_S" type="AnimatedSprite" parent="Collectable/Coin_S2"]
+position = Vector2( 2256.97, 143.372 )
+scale = Vector2( 0.066647, 0.0653703 )
+frames = SubResource( 17 )
+animation = "Coin_S"
+frame = 7
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_S3" type="Area2D" parent="Collectable"]
+script = ExtResource( 53 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_S3"]
+position = Vector2( 2257.41, 195.53 )
+shape = SubResource( 16 )
+
+[node name="Coin_S" type="AnimatedSprite" parent="Collectable/Coin_S3"]
+position = Vector2( 2257.87, 193.666 )
+scale = Vector2( 0.066647, 0.0653703 )
+frames = SubResource( 17 )
+animation = "Coin_S"
+frame = 7
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_S5" type="Area2D" parent="Collectable"]
+script = ExtResource( 53 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_S5"]
+position = Vector2( 2729.84, 335.898 )
+shape = SubResource( 16 )
+
+[node name="Coin_S" type="AnimatedSprite" parent="Collectable/Coin_S5"]
+position = Vector2( 2732.39, 336.129 )
+scale = Vector2( 0.066647, 0.0653703 )
+frames = SubResource( 17 )
+animation = "Coin_S"
+frame = 7
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_S6" type="Area2D" parent="Collectable"]
+script = ExtResource( 53 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_S6"]
+position = Vector2( 3113.23, 324.375 )
+shape = SubResource( 16 )
+
+[node name="Coin_S" type="AnimatedSprite" parent="Collectable/Coin_S6"]
+position = Vector2( 3110.55, 321.464 )
+scale = Vector2( 0.066647, 0.0653703 )
+frames = SubResource( 17 )
+animation = "Coin_S"
+frame = 7
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_S7" type="Area2D" parent="Collectable"]
+script = ExtResource( 53 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_S7"]
+position = Vector2( 3551.1, 152.582 )
+shape = SubResource( 16 )
+
+[node name="Coin_S" type="AnimatedSprite" parent="Collectable/Coin_S7"]
+position = Vector2( 3553.65, 149.671 )
+scale = Vector2( 0.066647, 0.0653703 )
+frames = SubResource( 17 )
+animation = "Coin_S"
+frame = 6
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_S8" type="Area2D" parent="Collectable"]
+script = ExtResource( 53 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_S8"]
+position = Vector2( 3893.63, 261.524 )
+shape = SubResource( 16 )
+
+[node name="Coin_S" type="AnimatedSprite" parent="Collectable/Coin_S8"]
+position = Vector2( 3897.23, 259.66 )
+scale = Vector2( 0.066647, 0.0653703 )
+frames = SubResource( 17 )
+animation = "Coin_S"
+frame = 6
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_S9" type="Area2D" parent="Collectable"]
+script = ExtResource( 53 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_S9"]
+position = Vector2( 4370.26, 188.197 )
+shape = SubResource( 16 )
+
+[node name="Coin_S" type="AnimatedSprite" parent="Collectable/Coin_S9"]
+position = Vector2( 4370.71, 185.286 )
+scale = Vector2( 0.066647, 0.0653703 )
+frames = SubResource( 17 )
+animation = "Coin_S"
+frame = 6
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_S10" type="Area2D" parent="Collectable"]
+script = ExtResource( 53 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_S10"]
+position = Vector2( 5090.95, 235.336 )
+shape = SubResource( 16 )
+
+[node name="Coin_S" type="AnimatedSprite" parent="Collectable/Coin_S10"]
+position = Vector2( 5093.5, 234.52 )
+scale = Vector2( 0.066647, 0.0653703 )
+frames = SubResource( 17 )
+animation = "Coin_S"
+frame = 6
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_S11" type="Area2D" parent="Collectable"]
+script = ExtResource( 53 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_S11"]
+position = Vector2( 5877.64, 48.8775 )
+shape = SubResource( 16 )
+
+[node name="Coin_S" type="AnimatedSprite" parent="Collectable/Coin_S11"]
+position = Vector2( 5880.19, 51.2038 )
+scale = Vector2( 0.066647, 0.0653703 )
+frames = SubResource( 17 )
+animation = "Coin_S"
+frame = 6
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_S12" type="Area2D" parent="Collectable"]
+script = ExtResource( 53 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_S12"]
+position = Vector2( 6465.29, -143.866 )
+shape = SubResource( 16 )
+
+[node name="Coin_S" type="AnimatedSprite" parent="Collectable/Coin_S12"]
+position = Vector2( 6466.8, -142.587 )
+scale = Vector2( 0.066647, 0.0653703 )
+frames = SubResource( 17 )
+animation = "Coin_S"
+frame = 5
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_B" parent="Collectable" instance=ExtResource( 64 )]
+
+[node name="Coin_B3" type="Area2D" parent="Collectable"]
+script = ExtResource( 65 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_B3"]
+position = Vector2( 1341.45, 338.503 )
+shape = SubResource( 18 )
+
+[node name="Coin_B" type="AnimatedSprite" parent="Collectable/Coin_B3"]
+position = Vector2( 1343.13, 336.674 )
+scale = Vector2( 0.0667084, 0.0535946 )
+z_index = -1
+frames = SubResource( 19 )
+animation = "Coin_B"
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_B4" type="Area2D" parent="Collectable"]
+script = ExtResource( 65 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_B4"]
+position = Vector2( 1867.5, 194.225 )
+shape = SubResource( 18 )
+
+[node name="Coin_B" type="AnimatedSprite" parent="Collectable/Coin_B4"]
+position = Vector2( 1867.56, 194.017 )
+scale = Vector2( 0.0667084, 0.0535946 )
+z_index = -1
+frames = SubResource( 19 )
+animation = "Coin_B"
+frame = 9
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_B5" type="Area2D" parent="Collectable"]
+script = ExtResource( 65 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_B5"]
+position = Vector2( 2706.42, 400.105 )
+shape = SubResource( 18 )
+
+[node name="Coin_B" type="AnimatedSprite" parent="Collectable/Coin_B5"]
+position = Vector2( 2707.28, 403.139 )
+scale = Vector2( 0.0667084, 0.0535946 )
+z_index = 2
+frames = SubResource( 19 )
+animation = "Coin_B"
+frame = 8
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_B6" type="Area2D" parent="Collectable"]
+script = ExtResource( 65 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_B6"]
+position = Vector2( 3234.9, 324.723 )
+shape = SubResource( 18 )
+
+[node name="Coin_B" type="AnimatedSprite" parent="Collectable/Coin_B6"]
+position = Vector2( 3238.2, 322.895 )
+scale = Vector2( 0.0667084, 0.0535946 )
+z_index = 2
+frames = SubResource( 19 )
+animation = "Coin_B"
+frame = 8
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_B7" type="Area2D" parent="Collectable"]
+script = ExtResource( 65 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_B7"]
+position = Vector2( 3514.54, 276.09 )
+shape = SubResource( 18 )
+
+[node name="Coin_B" type="AnimatedSprite" parent="Collectable/Coin_B7"]
+position = Vector2( 3517.83, 275.072 )
+scale = Vector2( 0.0667084, 0.0535946 )
+z_index = 2
+frames = SubResource( 19 )
+animation = "Coin_B"
+frame = 7
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_B8" type="Area2D" parent="Collectable"]
+script = ExtResource( 65 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_B8"]
+position = Vector2( 3516.16, 224.215 )
+shape = SubResource( 18 )
+
+[node name="Coin_B" type="AnimatedSprite" parent="Collectable/Coin_B8"]
+position = Vector2( 3516.21, 223.197 )
+scale = Vector2( 0.0667084, 0.0535946 )
+z_index = 2
+frames = SubResource( 19 )
+animation = "Coin_B"
+frame = 7
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_B9" type="Area2D" parent="Collectable"]
+script = ExtResource( 65 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_B9"]
+position = Vector2( 4338.87, 231.51 )
+shape = SubResource( 18 )
+
+[node name="Coin_B" type="AnimatedSprite" parent="Collectable/Coin_B9"]
+position = Vector2( 4338.92, 230.492 )
+scale = Vector2( 0.0667084, 0.0535946 )
+z_index = 2
+frames = SubResource( 19 )
+animation = "Coin_B"
+frame = 6
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_B10" type="Area2D" parent="Collectable"]
+script = ExtResource( 65 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_B10"]
+position = Vector2( 4399.66, 231.51 )
+shape = SubResource( 18 )
+
+[node name="Coin_B" type="AnimatedSprite" parent="Collectable/Coin_B10"]
+position = Vector2( 4402.15, 229.681 )
+scale = Vector2( 0.0667084, 0.0535946 )
+z_index = 2
+frames = SubResource( 19 )
+animation = "Coin_B"
+frame = 6
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_B11" type="Area2D" parent="Collectable"]
+script = ExtResource( 65 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_B11"]
+position = Vector2( 5028.65, 233.942 )
+shape = SubResource( 18 )
+
+[node name="Coin_B" type="AnimatedSprite" parent="Collectable/Coin_B11"]
+position = Vector2( 5029.51, 231.303 )
+scale = Vector2( 0.0667084, 0.0535946 )
+z_index = 2
+frames = SubResource( 19 )
+animation = "Coin_B"
+frame = 5
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_B12" type="Area2D" parent="Collectable"]
+script = ExtResource( 65 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_B12"]
+position = Vector2( 5818.93, 165.856 )
+shape = SubResource( 18 )
+
+[node name="Coin_B" type="AnimatedSprite" parent="Collectable/Coin_B12"]
+position = Vector2( 5820.61, 166.459 )
+scale = Vector2( 0.0667084, 0.0535946 )
+z_index = 2
+frames = SubResource( 19 )
+animation = "Coin_B"
+frame = 5
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_B13" type="Area2D" parent="Collectable"]
+script = ExtResource( 65 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_B13"]
+position = Vector2( 5889.45, 165.045 )
+shape = SubResource( 18 )
+
+[node name="Coin_B" type="AnimatedSprite" parent="Collectable/Coin_B13"]
+position = Vector2( 5891.13, 164.027 )
+scale = Vector2( 0.0667084, 0.0535946 )
+z_index = 2
+frames = SubResource( 19 )
+animation = "Coin_B"
+frame = 4
+speed_scale = 3.0
+playing = true
+
+[node name="Coin_B14" type="Area2D" parent="Collectable"]
+script = ExtResource( 65 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_B14"]
+position = Vector2( 6471.19, -8.99191 )
+shape = SubResource( 18 )
+
+[node name="Coin_B2" type="Area2D" parent="Collectable"]
+script = ExtResource( 65 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Coin_B2"]
+position = Vector2( 566.772, 113.194 )
+shape = SubResource( 18 )
+
+[node name="Coin_B" type="AnimatedSprite" parent="Collectable/Coin_B2"]
+position = Vector2( 567.716, 111.365 )
+scale = Vector2( 0.0667084, 0.0535946 )
+frames = SubResource( 19 )
+animation = "Coin_B"
+speed_scale = 3.0
+playing = true
+
+[node name="ScoreCounter" parent="." instance=ExtResource( 76 )]
+
+[node name="Effects" type="Node" parent="."]
+editor/display_folded = true
+
+[node name="SlowTime" parent="Effects" instance=ExtResource( 77 )]
+
+[node name="Raycaster" type="Node" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 424.202, 704.706 )
+gravity_point = true
+script = ExtResource( 78 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 111.665, 121.217 )
+shape = SubResource( 20 )
+
+[node name="Tile (5)" type="Sprite" parent="Area2D/CollisionShape2D"]
+position = Vector2( 607.669, 64.5261 )
+texture = ExtResource( 33 )
+
+[node name="Tile (5)2" type="Sprite" parent="Area2D/CollisionShape2D"]
+position = Vector2( 489.805, 66.3678 )
+texture = ExtResource( 33 )
+
+[node name="Tile (5)3" type="Sprite" parent="Area2D/CollisionShape2D"]
+position = Vector2( 375.624, 70.051 )
+texture = ExtResource( 33 )
+
+[node name="Tile (5)4" type="Sprite" parent="Area2D/CollisionShape2D"]
+position = Vector2( 716.326, 66.3678 )
+texture = ExtResource( 33 )
+
+[node name="Tile (5)5" type="Sprite" parent="Area2D/CollisionShape2D"]
+position = Vector2( 839.715, 66.3678 )
+texture = ExtResource( 33 )
+
+[node name="Tile (4)" type="Sprite" parent="Area2D/CollisionShape2D/Tile (5)5"]
+position = Vector2( -557.014, 5.52496 )
+texture = ExtResource( 29 )
+
+[node name="Area2D2" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 1919.07, 793.906 )
+gravity_point = true
+script = ExtResource( 78 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( 183.442, -24.5493 )
+shape = SubResource( 20 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( 5402.65, -480.821 )
+shape = SubResource( 21 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( 4858.06, -254.241 )
+shape = SubResource( 21 )
+
+[node name="Tile (6)5" type="Sprite" parent="."]
+position = Vector2( 1452.93, 894.132 )
+texture = ExtResource( 32 )
+
+[node name="Tile (6)6" type="Sprite" parent="."]
+position = Vector2( -51.6824, 800.209 )
+scale = Vector2( 4.33796, 1 )
+texture = ExtResource( 32 )
+
+[node name="Tile (6)7" type="Sprite" parent="."]
+position = Vector2( -51.6824, 923.598 )
+scale = Vector2( 4.33796, 1 )
+texture = ExtResource( 32 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseScreen2" type="Node" parent="CanvasLayer"]
+
+[node name="Control" type="Control" parent="CanvasLayer/PauseScreen2"]
+pause_mode = 2
+visible = false
+margin_right = 1123.0
+margin_bottom = 641.0
+script = ExtResource( 79 )
+
+[node name="GamePause" type="Sprite" parent="CanvasLayer/PauseScreen2/Control"]
+modulate = Color( 1, 1, 1, 0.647059 )
+position = Vector2( 537.097, 311.13 )
+scale = Vector2( 0.322744, 0.288755 )
+texture = ExtResource( 80 )
+
+[node name="quit" type="Button" parent="CanvasLayer/PauseScreen2/Control"]
+modulate = Color( 1, 1, 1, 0.0117647 )
+margin_left = 558.0
+margin_top = 287.0
+margin_right = 691.0
+margin_bottom = 324.0
+
+[node name="resume" type="Button" parent="CanvasLayer/PauseScreen2/Control"]
+modulate = Color( 1, 1, 1, 0.0431373 )
+margin_left = 384.297
+margin_top = 286.927
+margin_right = 506.297
+margin_bottom = 326.927
+
+[node name="touchscreen" type="Node2D" parent="CanvasLayer"]
+
+[node name="right" type="TouchScreenButton" parent="CanvasLayer/touchscreen"]
+self_modulate = Color( 1, 1, 1, 0.329412 )
+position = Vector2( 292.034, 420.61 )
+rotation = 1.57079
+scale = Vector2( 1.44386, 1.57001 )
+normal = ExtResource( 81 )
+pressed = ExtResource( 82 )
+action = "ui_right"
+
+[node name="left" type="TouchScreenButton" parent="CanvasLayer/touchscreen"]
+self_modulate = Color( 1, 1, 1, 0.329412 )
+position = Vector2( 29.465, 419.257 )
+scale = Vector2( 1.44532, 1.46605 )
+normal = ExtResource( 83 )
+pressed = ExtResource( 84 )
+action = "ui_left"
+
+[node name="jump" type="TouchScreenButton" parent="CanvasLayer/touchscreen"]
+self_modulate = Color( 1, 1, 1, 0.329412 )
+position = Vector2( 895.817, 348.228 )
+scale = Vector2( 1.3046, 1.13538 )
+normal = ExtResource( 85 )
+pressed = ExtResource( 86 )
+action = "ui_up"
+
+[node name="attack" type="TouchScreenButton" parent="CanvasLayer/touchscreen"]
+self_modulate = Color( 1, 1, 1, 0.329412 )
+position = Vector2( 897.922, 472.586 )
+scale = Vector2( 1.27075, 1.11845 )
+normal = ExtResource( 87 )
+pressed = ExtResource( 88 )
+action = "ui_down"
+
+[node name="run" type="TouchScreenButton" parent="CanvasLayer/touchscreen"]
+self_modulate = Color( 1, 1, 1, 0.329412 )
+position = Vector2( 774.596, 468.525 )
+scale = Vector2( 1.27075, 1.21999 )
+normal = ExtResource( 89 )
+pressed = ExtResource( 90 )
+action = "ui_accept"
+
+[node name="pause" type="TouchScreenButton" parent="CanvasLayer/touchscreen"]
+self_modulate = Color( 1, 1, 1, 0.329412 )
+position = Vector2( 864.346, 20.7958 )
+scale = Vector2( 1.22153, 1.22563 )
+normal = ExtResource( 91 )
+pressed = ExtResource( 92 )
+action = "ui_cancel"
+
+[node name="up2" type="TouchScreenButton" parent="CanvasLayer/touchscreen"]
+self_modulate = Color( 1, 1, 1, 0.478431 )
+position = Vector2( 127.254, 377.701 )
+normal = ExtResource( 81 )
+pressed = ExtResource( 82 )
+action = "ui_up"
+
+[node name="down2" type="TouchScreenButton" parent="CanvasLayer/touchscreen"]
+modulate = Color( 1, 1, 1, 0.423529 )
+position = Vector2( 186.82, 549.63 )
+rotation = -3.14159
+normal = ExtResource( 81 )
+pressed = ExtResource( 82 )
+action = "ui_down"
+
+[node name="ArrowSign" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( -11.5402, 451.127 )
+scale = Vector2( 1, 1.34971 )
+z_index = -5
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="ArrowSign"]
+margin_left = -30.7616
+margin_top = -32.979
+margin_right = 41.2384
+margin_bottom = 117.021
+rect_rotation = 15.0
+custom_fonts/font = SubResource( 22 )
+text = "Graveyard"
+
+[node name="story" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="story"]
+
+[node name="Control" type="Control" parent="story/CanvasLayer"]
+visible = false
+margin_left = -3.46918
+margin_top = 1.12253
+margin_right = 36.5308
+margin_bottom = 41.1225
+
+[node name="bg" type="Sprite" parent="story/CanvasLayer/Control"]
+self_modulate = Color( 1, 1, 1, 0.729412 )
+position = Vector2( 531.384, 526.236 )
+scale = Vector2( 0.811136, 0.105046 )
+texture = ExtResource( 93 )
+
+[node name="Label" type="Label" parent="story/CanvasLayer/Control"]
+self_modulate = Color( 1, 1, 1, 0.498039 )
+margin_left = 56.7542
+margin_top = 458.464
+margin_right = 1018.75
+margin_bottom = 627.464
+custom_fonts/font = SubResource( 23 )
+custom_colors/font_color = Color( 0.6, 0.956863, 0.639216, 1 )
+text = "Finally my trainng has been over. I must return to the castle on the Snow Mountain for
+ further orders. It has been a long time, more than a year. I have to go to the mainland
+ to carry out my duty toprotect this world from his power."
+
+[node name="storyarea" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Area2D" type="Area2D" parent="storyarea"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="storyarea/Area2D"]
+position = Vector2( 1122.62, 181.433 )
+shape = SubResource( 24 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 94 )
+autoplay = true
+max_distance = 1e+008
+
+[node name="controls" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="controls"]
+
+[node name="Control" type="Control" parent="controls/CanvasLayer"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Label" type="Label" parent="controls/CanvasLayer/Control"]
+modulate = Color( 1, 1, 1, 0.513726 )
+margin_left = 49.7728
+margin_top = 497.092
+margin_right = 1290.77
+margin_bottom = 645.092
+custom_fonts/font = SubResource( 25 )
+text = "You have to press \"A\" or action button while on their head  
+to kill the enemies."
+
+[node name="bg" type="Sprite" parent="controls/CanvasLayer/Control"]
+self_modulate = Color( 1, 1, 1, 0.560784 )
+position = Vector2( 522.819, 541.97 )
+scale = Vector2( 0.775338, 0.0769819 )
+z_index = -1
+texture = ExtResource( 93 )
+
+[node name="control" type="Area2D" parent="controls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="controls/control"]
+position = Vector2( 3585.41, 299.814 )
+shape = SubResource( 26 )
+
+[node name="action" type="Timer" parent="controls"]
+[connection signal="timeout" from="Player2/Player/timer" to="Player2/Player" method="_on_timer_timeout"]
+[connection signal="timeout" from="Player2/Player/Camera2D/ScreenShake/Timer" to="Player2/Player/Camera2D/ScreenShake" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Player2/Player/Camera2D/ScreenShake/Duration" to="Player2/Player/Camera2D/ScreenShake" method="_on_Duration_timeout"]
+[connection signal="timeout" from="Player2/Player/soundtimer" to="Player2/Player" method="_on_soundtimer_timeout"]
+[connection signal="timeout" from="Player2/Player/soundtimer1" to="Player2/Player" method="_on_soundtimer1_timeout"]
+[connection signal="timeout" from="Player2/Player/soundtimer3" to="Player2/Player" method="_on_soundtimer3_timeout"]
+[connection signal="timeout" from="Player2/Player/dead2" to="Player2/Player" method="_on_dead2_timeout"]
+[connection signal="timeout" from="Player2/Player/swordtimer" to="Player2/Player" method="_on_swordtimer_timeout"]
+[connection signal="body_entered" from="Collectable/Coin_G6" to="Collectable/Coin_G6" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G6" to="Player2/Player" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G4" to="Player2/Player" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G4" to="Collectable/Coin_G4" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G5" to="Collectable/Coin_G5" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G5" to="Player2/Player" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G2" to="Player2/Player" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G2" to="Collectable/Coin_G2" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G3" to="Player2/Player" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G3" to="Collectable/Coin_G3" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G7" to="Collectable/Coin_G7" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G7" to="Player2/Player" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G8" to="Player2/Player" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G8" to="Collectable/Coin_G8" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G9" to="Collectable/Coin_G9" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G9" to="Player2/Player" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G10" to="Player2/Player" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G10" to="Collectable/Coin_G10" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G11" to="Collectable/Coin_G11" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G11" to="Player2/Player" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G12" to="Player2/Player" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G12" to="Collectable/Coin_G12" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G13" to="Player2/Player" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G13" to="Collectable/Coin_G13" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G14" to="Player2/Player" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G14" to="Collectable/Coin_G14" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G15" to="Player2/Player" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_G15" to="Collectable/Coin_G15" method="_on_Coin_G_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_S4" to="Player2/Player" method="_on_Coin_S_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_S4" to="Collectable/Coin_S4" method="_on_Coin_S_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_S2" to="Player2/Player" method="_on_Coin_S_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_S2" to="Collectable/Coin_S2" method="_on_Coin_S_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_S3" to="Player2/Player" method="_on_Coin_S_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_S3" to="Collectable/Coin_S3" method="_on_Coin_S_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_S5" to="Player2/Player" method="_on_Coin_S_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_S5" to="Collectable/Coin_S5" method="_on_Coin_S_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_S6" to="Player2/Player" method="_on_Coin_S_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_S6" to="Collectable/Coin_S6" method="_on_Coin_S_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_S7" to="Player2/Player" method="_on_Coin_S_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_S7" to="Collectable/Coin_S7" method="_on_Coin_S_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_S8" to="Player2/Player" method="_on_Coin_S_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_S8" to="Collectable/Coin_S8" method="_on_Coin_S_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_S9" to="Player2/Player" method="_on_Coin_S_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_S9" to="Collectable/Coin_S9" method="_on_Coin_S_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_S10" to="Player2/Player" method="_on_Coin_S_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_S10" to="Collectable/Coin_S10" method="_on_Coin_S_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_S11" to="Player2/Player" method="_on_Coin_S_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_S11" to="Collectable/Coin_S11" method="_on_Coin_S_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_S12" to="Player2/Player" method="_on_Coin_S_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_S12" to="Collectable/Coin_S12" method="_on_Coin_S_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B3" to="Player2/Player" method="_on_Coin_B_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B3" to="Collectable/Coin_B3" method="_on_Coin_B_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B4" to="Player2/Player" method="_on_Coin_B_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B4" to="Collectable/Coin_B4" method="_on_Coin_B_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B5" to="Player2/Player" method="_on_Coin_B_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B5" to="Collectable/Coin_B5" method="_on_Coin_B_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B6" to="Player2/Player" method="_on_Coin_B_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B6" to="Collectable/Coin_B6" method="_on_Coin_B_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B7" to="Player2/Player" method="_on_Coin_B_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B7" to="Collectable/Coin_B7" method="_on_Coin_B_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B8" to="Player2/Player" method="_on_Coin_B_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B8" to="Collectable/Coin_B8" method="_on_Coin_B_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B9" to="Player2/Player" method="_on_Coin_B_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B9" to="Collectable/Coin_B9" method="_on_Coin_B_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B10" to="Player2/Player" method="_on_Coin_B_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B10" to="Collectable/Coin_B10" method="_on_Coin_B_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B11" to="Player2/Player" method="_on_Coin_B_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B11" to="Collectable/Coin_B11" method="_on_Coin_B_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B12" to="Player2/Player" method="_on_Coin_B_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B12" to="Collectable/Coin_B12" method="_on_Coin_B_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B13" to="Player2/Player" method="_on_Coin_B_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B13" to="Collectable/Coin_B13" method="_on_Coin_B_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B14" to="Player2/Player" method="_on_Coin_B_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B14" to="Collectable/Coin_B14" method="_on_Coin_B_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B2" to="Player2/Player" method="_on_Coin_B_body_entered"]
+[connection signal="body_entered" from="Collectable/Coin_B2" to="Collectable/Coin_B2" method="_on_Coin_B_body_entered"]
+[connection signal="pressed" from="CanvasLayer/PauseScreen2/Control/quit" to="CanvasLayer/PauseScreen2/Control" method="_on_quit_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseScreen2/Control/resume" to="CanvasLayer/PauseScreen2/Control" method="_on_resume_pressed"]
+[connection signal="body_entered" from="storyarea/Area2D" to="Player2/Player" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="storyarea/Area2D" to="Player2/Player" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="controls/control" to="Player2/Player" method="_on_control_body_entered"]
+[connection signal="timeout" from="controls/action" to="Player2/Player" method="_on_action_timeout"]

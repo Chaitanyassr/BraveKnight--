@@ -1,0 +1,40 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Coin_G.gd" type="Script" id=1]
+[ext_resource path="res://goldcoin/Gold_1.png" type="Texture" id=2]
+[ext_resource path="res://goldcoin/Gold_2.png" type="Texture" id=3]
+[ext_resource path="res://goldcoin/Gold_3.png" type="Texture" id=4]
+[ext_resource path="res://goldcoin/Gold_4.png" type="Texture" id=5]
+[ext_resource path="res://goldcoin/Gold_5.png" type="Texture" id=6]
+[ext_resource path="res://goldcoin/Gold_6.png" type="Texture" id=7]
+[ext_resource path="res://goldcoin/Gold_7.png" type="Texture" id=8]
+[ext_resource path="res://goldcoin/Gold_8.png" type="Texture" id=9]
+[ext_resource path="res://goldcoin/Gold_9.png" type="Texture" id=10]
+
+[sub_resource type="CircleShape2D" id=17]
+radius = 17.4829
+
+[sub_resource type="SpriteFrames" id=18]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "Coin_G",
+"speed": 5.0
+} ]
+
+[node name="Coin_G" type="Area2D"]
+position = Vector2( -2.37506, 5.51262 )
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1807.45, 190.485 )
+shape = SubResource( 17 )
+
+[node name="Coin_G" type="AnimatedSprite" parent="."]
+position = Vector2( 1807.87, 189.487 )
+scale = Vector2( 0.0791902, 0.061263 )
+frames = SubResource( 18 )
+animation = "Coin_G"
+speed_scale = 3.0
+playing = true
+[connection signal="body_entered" from="." to="." method="_on_Coin_G_body_entered"]

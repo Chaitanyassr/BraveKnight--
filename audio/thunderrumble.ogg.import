@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/thunderrumble.ogg-7682b208e0062616ec365d446dbf7a57.oggstr"
+
+[deps]
+
+source_file="res://audio/thunderrumble.ogg"
+dest_files=[ "res://.import/thunderrumble.ogg-7682b208e0062616ec365d446dbf7a57.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

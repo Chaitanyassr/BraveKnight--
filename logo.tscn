@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://logo.gd" type="Script" id=1]
+[ext_resource path="res://story/background.png" type="Texture" id=2]
+[ext_resource path="res://story/coollogo_com-22269458.png" type="Texture" id=3]
+
+[node name="logo" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="background" type="Sprite" parent="."]
+modulate = Color( 0.458824, 0.321569, 0.321569, 1 )
+position = Vector2( 478.619, 347.336 )
+scale = Vector2( 0.641154, 0.740833 )
+texture = ExtResource( 2 )
+
+[node name="coollogo_com-22269458" type="Sprite" parent="background"]
+position = Vector2( 54.5217, -69.2345 )
+scale = Vector2( 2.16196, 2.15932 )
+texture = ExtResource( 3 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

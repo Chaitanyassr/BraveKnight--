@@ -1,0 +1,41 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Coin_B.gd" type="Script" id=1]
+[ext_resource path="res://Coin_B/Bronze_1.png" type="Texture" id=2]
+[ext_resource path="res://Coin_B/Bronze_2.png" type="Texture" id=3]
+[ext_resource path="res://Coin_B/Bronze_3.png" type="Texture" id=4]
+[ext_resource path="res://Coin_B/Bronze_4.png" type="Texture" id=5]
+[ext_resource path="res://Coin_B/Bronze_5.png" type="Texture" id=6]
+[ext_resource path="res://Coin_B/Bronze_6.png" type="Texture" id=7]
+[ext_resource path="res://Coin_B/Bronze_7.png" type="Texture" id=8]
+[ext_resource path="res://Coin_B/Bronze_8.png" type="Texture" id=9]
+[ext_resource path="res://Coin_B/Bronze_9.png" type="Texture" id=10]
+[ext_resource path="res://Coin_B/Bronze_10.png" type="Texture" id=11]
+
+[sub_resource type="CircleShape2D" id=21]
+radius = 19.1503
+
+[sub_resource type="SpriteFrames" id=22]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "Coin_B",
+"speed": 5.0
+} ]
+
+[node name="Coin_B" type="Area2D"]
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 566.772, 156.354 )
+shape = SubResource( 21 )
+
+[node name="Coin_B" type="AnimatedSprite" parent="."]
+position = Vector2( 566.985, 155.257 )
+scale = Vector2( 0.0667084, 0.0535946 )
+frames = SubResource( 22 )
+animation = "Coin_B"
+frame = 2
+speed_scale = 3.0
+playing = true
+[connection signal="body_entered" from="." to="." method="_on_Coin_B_body_entered"]
