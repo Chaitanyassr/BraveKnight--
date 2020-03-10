@@ -1,199 +1,143 @@
-# Swipe Detector for Godot Engine
-Swipe Detector is a swipe detection script that monitor screen input
-(mouse/touch) triggering different signals informing swipe progress
-or swipe finalization. There are a lot of configurations available
-to indicate detector when to consider a movement to a swipe or to
-indicate the precision of the detected swipe curve. On swipe end you
-will obtain a ﻿SwipeGesture﻿ object that holds swipe information such
-as duration, speed, distance (from initial point), points, Curve2D.
+# BRAVEKNIGHT-@
 
-It also implements some basic pattern detections, but it is still
-experimental.
+“Time to become a brave Knight!!!”
 
-![Trail](https://github.com/arypbatista/godot-swipe-detector/blob/master/docs/images/trail.png?raw=true)
-
-## Usage
-
-Add the script to a node in your scene and connect to the [signals](#signals).
-There are many [options available](#options-exported-variables) to customize Swipe Detector's behavior.
-
-When swipe is detected, you will receive a `SwipeGesture` object with all
-the gesture information. This includes `points` conforming the gesture
-and `duration` of the swipe. [Read more](#swipegesture)
-
-You can set patterns for automatic detection (experimental), see [Working With Patterns](#working-with-patterns).
-
-You can get the history of all gestures through `history()` method on swipe
-detector.
-
-### Basic Example
-
-The following is an example of a callback connected to the `swiped` signal.
-This callback instances a cloud for each point. The cloud is a custom scene,
-you can replace it with your own.
-
-```GDScript
-func swiped(gesture):
-	for point in gesture.get_points():
-		var cloud = Cloud.instance()
-		cloud.set_pos(point)
-		add_child(cloud)
-```
-
-See the [examples folder](./examples) for more examples.
-
-### Working with Patterns
-
-There are two ways to work with patterns, you can do it from editor by adding pattern nodes
-to the `SwipeDetector` node or you can interact directly with [`SwipeDetector` API](#public-api-methods).
-
-See all gesture detection examples [here](./examples/gesture-detection/).
-
-#### Using Pattern Nodes
-
-Pattern nodes is not a particular node type (maybe in a future) but a node grouping other nodes which
-represent pattern points.
-
-For example:
-
-![Square Pattern Tree](https://github.com/arypbatista/godot-swipe-detector/blob/master/docs/images/square-pattern-tree.png?raw=true)
-![Square Pattern Render](https://github.com/arypbatista/godot-swipe-detector/blob/master/docs/images/square-pattern-render.png?raw=true)
-
-When nesting this tree under your `SwipeDetector` node it will be included as a trigger pattern with the same name as the pattern node.
-
-See the [Gesture Detection Example With Patterns](./examples/gesture-detection/gesture_detection_with_patterns_example.tscn) for pattern detection example.
-
-#### Using `SwipeDetector` API to Add Patterns
-
-The following example builds a square pattern and sets it as trigger pattern.
-
-```GDScript
-onready var swipeDetector = get_node('SwipeDetector')
-
-func ready():
-    var pattern_points = [v(0,0), v(0, 100), v(0, 200), v(100, 200), v(200, 200), v(200, 100), v(200, 0), v(100, 0)]
-    var pattern_gesture = swipeDetector.points_to_pattern(pattern_points)
-    swipeDetector.add_pattern_detection('SquarePattern', pattern_gesture)
-    swipeDetector.connect('pattern_detected', self, 'on_pattern_detection')
-
-# Alias for Vector2
-func v(x, y):
-    return Vector2(x, y)
-
-func on_pattern_detection(pattern_name, gesture):
-    if pattern_name == 'SquarePattern':
-        print('Square Pattern was detected!')
-
-```
-
-You may see [Gesture Detection Example](./examples/gesture-detection/gesture_detection_example.tscn) where `SwipeDetector` API is used
-to set a recorded gesture as trigger pattern.
-
-### Multiple Swipe Spaces using Area2D
-
-You can specify the area where detection occurs by attaching Area2D
-children to SwipeDetector. A simple use case for this would be to
-implement a pong game where each player swipes over the screen to
-control the player's paddle.
-
-![Area2D Children](./docs/images/swipeareas.png)
-
-If Area2D children are attached to SwipeDetector, swipes will be only
-detected in these specific areas and each gesture will contain information
-regarding the area where it was originated.
-
-```GDScript
-func _on_SwipeDetector_swipe_started( partial_gesture ):
-    print('Swipe started on area ', partial_gesture.get_area().get_name())
-```
-
-If not Area2D children are attached, gestures' `get_area()` method will return `null`.
-
-You may see [Swipe Areas Example](./examples/swipe-areas/swipe_areas_example.tscn) where swipe detections are performed in two different areas and a trail is rendered in different color for each of these.
+Kumar Chaitanya
+B-Tech CSE, 5th sem
+ Maharishi Markandeshwar deemed to beUniversity
 
 
 
 
-## Options (Exported Variables)
 
-There are some options available:
+Introduction
 
-- `Detect Gesture`: Indicates whether detector should detect or not swiping.
-- `Process Method`: Indicates the process method to be used (Fixed or Idle).
-- `Distance Threshold`: Indicates which is the minimum distance between two
-points on the gesture, smaller this number, bigger the point count you will get
-(i.e. more precisse information).
-- `Duration Threshold`: Indicates how long a gesture needs to last to be
-considered as a gesture. You can calibrate the swipe detector so you don't
-accidentally swipe when intended to click.
-- `Limit Duration`: Indicates whether to limit swipe by duration or not.
-- `Maximum Duration`: Indicates the maximum duration for a swipe.
-- `Minimum Points`: Indicates how many points makes a gesture. You may only
-admit complex gestures with more than six points, for example.
-- `Limit Points`: Indicates whether to limit swipe count points or not.
-- `Maximum Points`: Indicates the maximum point count for a swipe.
-- `Pattern Detection Threshold`: Indicates minimum score for pattern detection matching.
-- `Directions Mode`: Switch between four or eight directions mode.
-- `Debug Mode`: Enable/Disable debug output on console.
+Brave Knight is a platform game in which a player runs, jump or collides with different object on a platform. The game follows the same format and is similar to popular games like Mario, Donkey Kong and The Legend of Zelda and works on all platforms(LINUX, IOS, Windows, Android). It is currently under construction and is being built with Godot engine. What makes this game different from other platform game is the vast variety of the functionality in which the player will be going to interact with the game world and an interactive and synergistic storyline that is just not going to mesmerize but will also  provide moral and chaste values to the younger generation.
 
 
-## Signals
+About the game engine
 
-- `swiped(gesture)` - Signal triggered when swipe captured.
-- `swipe_ended(gesture)` - Alias for `swiped(gesture)`.
-- `swipe_started(partial_gesture)` - Signal triggered when swipe started.
-- `swipe_updated(partial_gesture)` - Signal triggered when gesture is updated.
-- `swipe_updated_with_delta(partial_gesture, delta)` - Signal triggered when gesture is updated. `delta` parameter indicates time delta from last update.
-- `swipe_failed()` - Signal triggered when swipe failed. This means the swipe didn't pass thresholds and requirements to be detected as swipe.
-- `pattern_detected(pattern_name, actual_gesture)` - Signal triggered when gesture matches predefined pattern.
+Godot engine is completely free and open - source under permissive MIT license. The best part about the engine is that it is an open source engine so anyone can find its source code on Github and can contribute towards the making of it. The game that you would be making would be all yours since it is in open source. Godot is written in C and C++. It has many stunning features that will definitely  blow up your mind. As stated on its official site, it’s unique design is as follows-
+
+Innovative design 
 
 
-## Public API Methods & constants
 
-Methods intended for public usage are:
+Godot engine follows a node based system architecture as we can see on the upper left side in the screenshot. A parent node has its child that actually makes the work easier. It contains various pre defined nodes such as Kinematic body and Static body and these nodes can have children like Kinematic body, which could have a sprite or an animated sprite and a collision body that would collide with the other objects in the game. Kinematic body is a special node that the user can control. Static body can also have a sprite and a collision body and it is used to make other things like platform or other object in the game with which the kinematic body can collide. A parent and a child will always be together like the sprite and the collision body would be together when the game scene would be in action . That is, if you have set a certain distance and if you define certain relationship between two children of the same parent then they would have to maintain it throughout the whole scene . The node and child based architecture allows easy handling of such system. One can easily edit the Z - index in 2-Dimensional game with the help of this system that is the sprite which has been seen above would also interact or overlap with the other in the real sense. The one higher on the series has the lowest Z - index value and the one lowest in the series would  have the highest Z - index value. We have also marked boxes specially designed  for editing Z - index value in 2 - Dimensional game.
 
-- `add_pattern_detection(name, gesture)` - add a pattern as trigger for `pattern_detected` signal.
-- `remove_pattern_detection(name)` - remove a specific trigger pattern.
-- `remove_pattern_detections()` - remove all trigger patterns.
-- `history()` - list of all the gestures detected since component creation.
-- `points_to_gesture(points)` - Build a gesture object from a list of points.
 
-Direction constants, available on `addons/swipe-detector/directions.gd`:
+Gorgeous 3 - D and beautiful 2 - D
 
-- `DIRECTION_DOWN`
-- `DIRECTION_DOWN_RIGHT`
-- `DIRECTION_RIGHT`
-- `DIRECTION_UP_RIGHT`
-- `DIRECTION_UP`
-- `DIRECTION_UP_LEFT`
-- `DIRECTION_LEFT`
-- `DIRECTION_DOWN_LEFT`
-- `DIRECTIONS` - List of directions ordered.
 
-## Class References
 
-### `SwipeGesture`
+As stated in the main site of Godot engine, we can surely achieve an innovative 3 - D render design and a beautiful 2 - D design which works in pixel coordinates and have many built in tools to optimize the colour, to transform the sprite, to change the offset , animation, Z - index, to attach the script etc.
 
-The `SwipeGesture` class instances store all the information gathered from gestures.
 
-#### API
 
-Methods intended for public usage are:
+Uncomplicated way of programing
 
-- `get_area()` - Returns the area were gesture was originated. `null` if not
-                 using detection areas.
-- `get_duration()` - Returns gesture duration.
-- `get_distance()` - Returns the path distance from the first to the last point.
-- `get_speed()` - Distance divided by duration of swipe.
-- `get_points()` - Returns the points conforming the gesture.
-- `get_curve()` - Returns a Curve2D built from gesture points.
-- `first_point()` - Returns the first point of the gesture.
-- `last_point()` - Returns the last point of the gesture.
-- `point_count()` - Returns the point count.
-- `get_direction()` - Return a direction string use constants to test this values.
-- `get_direction_vector()` - Returns the direction vector.
-- `get_direction_angle()` - Returns the direction angle.
+“It is said that one can do 30 days of work in a single day when using Godot compared to other popular game engines like Unreal and Unity.”
 
-## Future Work
 
-Want to know what is ahead? Visit the [enhancements list](../../labels/enhancement)!
+
+
+
+Game can be built by using C++ or C# but godot engine also provides an alternative way to use its own language that is GD - Script  which according to me is easier than building a game in C++ or C#. It is just like python, the only difference is that you have to declare variable in it. It is object oriented and also contain some special methods like queue_free(), that could really save time and make work easier. It also has special node signal editing system on the right side that allows to connect one node to another through methods.
+
+Drag and Drop system
+
+
+Godot engine stores a sprite or a scene(in tscn format) on the lower right side and can be easily dragged and dropped to its designated area.
+
+
+Open source
+
+It allows anyone to contribute in the making of this glorious game engine.
+
+
+
+About the game “Brave Knight”
+
+Brave knight is build by Kumar Chaitanya, who’s the scribbler  of this article and he is using Godot Engine and the infamous inbuilt language GD - Script for it. The game is open source and all the source code is available on the Github account of Chaitanya. Free sprite and tileset has been used for this game for the time being so as to keep the cost of the game at the bay. New astounding features are been added to make the game more interactive and fluid, like slow motion or screen shaking when hit by a certain object in the game. Level wise difficulty is also getting increased. It has been the deep consideration of the author to give users a good control over the player in the game in a very unhurried manner, so as to make things more engrossing. For an example, first level only have a single jump whereas second level has double jump and third has sky walk feature(from the one piece). It has been well said that-
+
+“Good things take time”
+
+ So you will be going to encounter some bewildering feature in each and every level. And the difficulty level has been kept very high from the start  to make things gripping and compelling. Intelligence of the enemy would be increasing throughout the level and will be  more prominent and defined. Combat system is also under development to tackle such a robust system. The newly added feature includes artificial intelligence and moving platform in the game with a parallax background.
+
+
+The game GUI (Graphic user interface)
+
+
+
+The game GUI is currently under development as new animated screens are being added. But for now this is the title screen.
+
+
+
+
+And that's  the pause screen.
+
+
+Artificial intelligence enemy
+
+
+
+
+
+
+An enemy that can follow you would surely be hard to kill.
+
+“One can not escape the death”
+
+
+
+
+Story
+
+
+A game can't survive if it doesn’t have an engaging storyline. Luckily Brave Knight has an enthralling and gripping storyline that would not only make playing Brave Knight worth it but also going to illuminate righteous values. Nothing less you can expect from a game designer who is an admirer of anime.
+The story is about a Brave Knight who is returning back to the castle after doing his training. He crosses zombie land, followed by the wild and furious jungle and then the snow land to reach his destination only to find a shocking truth about the world he lives in, and the rest is up to you to explore the vast world of the Brave Knight.
+
+
+New features that would be added
+
+
+Snow land - level 3
+Magmapia - level 4
+Split end(alternative storyline)
+Character to choose(would affect the storyline)
+
+
+
+Future scope
+
+Online scoreboard 
+ multiplayer system
+Animation (through blender)
+Cut scene(through blender)
+
+
+
+
+
+A note from the author
+
+This is my first game on which I have been working sincerely for the past one month. I am looking forward for companies who are willing to advertise themselves through my game pertaining to sponsorship agreements.
+
+At last, thanks to all those who supported me in my dream journey of game making in reality.
+
+
+
+You can reach me by
+
+Email - chaitanyas@gmail.com
+Github - https://github.com/Chaitanyassr
+Instagram - https://www.instagram.com/1st_incommand/
+Twitter - https://twitter.com/Chinu282828777
+Linkedin - https://www.linkedin.com/in/chaitanya-chinu-a04a13147/
+
+
+
+
+
+
+
