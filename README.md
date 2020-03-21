@@ -5,7 +5,7 @@
   <a href="#"><strong> -- Learn more -- </strong></a>
   <br>
   <br>
-   <a href="">Report issue</a>
+   <a href="https://github.com/Chaitanyassr/BraveKnight--/issues/new">Report issue</a>
 </p>
 
 
