@@ -1,6 +1,15 @@
-# BRAVEKNIGHT-@
+<h1 align="center">  BRAVEKNIGHT-@</h1>
+<p align="center">
+    “Time to become a brave Knight!!!”
+  <br>
+  <a href="#"><strong> -- Learn more -- </strong></a>
+  <br>
+  <br>
+   <a href="">Report issue</a>
+</p>
 
-“Time to become a brave Knight!!!”
+
+
 
 Kumar Chaitanya
 B-Tech CSE, 5th sem
